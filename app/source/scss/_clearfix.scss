@@ -1,0 +1,20 @@
+.clearfix {
+	display: inline-table;
+	min-height: 1%;
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;		
+	}
+}
+ 
+/* Hides from IE-mac */
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
