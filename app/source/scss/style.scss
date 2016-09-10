@@ -20,8 +20,9 @@ body {
 .com {
 	position: absolute;
 	&.com1 {
-		top: 20px;
-		left: 100px;
+		top: 550px;
+		right: 60px;
+		z-index: 3;
 	}
 	&.com2 {
 		top: 530px;
@@ -122,6 +123,7 @@ body {
 	height: 50vh;
 	background: url('../images/header/bg.jpg') center center/cover gray;
 	.nav-bg {
+		z-index: 8;
 		position: fixed;
 		width: 100vw;
 		height: 100px;
@@ -171,6 +173,7 @@ body {
 	.member-interview-item {
 		display: inline-block;
 		background: #000;
+		height: 377px;
 	}
 	.member-img {
 		float: left;
@@ -190,7 +193,7 @@ body {
 			top: 0;
 			left: 0;
 			width: 240px;
-			height: 378px;
+			height: 376px;
 			z-index: 2;
 			display: none;
 			background: rgba(0,0,0,0.4);
@@ -211,6 +214,12 @@ body {
 		.posts-thumb {
 			float: left;
 			width: 100%;
+		}
+		.article-link {
+			color: #333;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 		.posts-info {
 			position: relative;
