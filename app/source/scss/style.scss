@@ -13,6 +13,9 @@ body {
 	font-weight: bold;
 }
 
+.font-sati {
+	font-family: 'Satisfy', cursive;
+
 .com {
 	position: absolute;
 	&.com1 {
@@ -165,6 +168,36 @@ body {
 	font-size: 0;
 	.member-interview-item {
 		display: inline-block;
+		background: #000;
+	}
+	.member-img {
+		float: left;
+		display: block;
+		position: relative;
+		.interview-detail {
+			text-align: center;
+			.font-sati {
+				padding: 90px 0 20px 0;
+				font-size: 30px;
+			}
+			p {
+				padding-bottom: 20px;
+			}
+			font-size: 17px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 240px;
+			height: 378px;
+			z-index: 2;
+			display: none;
+			background: rgba(0,0,0,0.4);
+		}
+		&:hover {
+			.interview-detail {
+				display: block;
+			}
+		}
 	}
 }
 
@@ -353,6 +386,5 @@ body {
 			margin: 20px 0 20px 8px;
 		}
 	}
-
 }
 
