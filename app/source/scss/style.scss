@@ -15,6 +15,17 @@ body {
 
 .font-sati {
 	font-family: 'Satisfy', cursive;
+
+.com {
+	position: absolute;
+	&.com1 {
+		top: 20px;
+		right: -200px;
+	}
+	&.com2 {
+		top: 30px;
+		left: -40px;
+	}
 }
 
 .wrapper {
