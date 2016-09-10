@@ -1,0 +1,35 @@
+.sidebar {
+	float: right;
+	width: 240px;
+	.recruit {
+		img {
+			width: 100%;
+		}
+	}
+	.instagram {
+		height: 550px;
+		width: 240px;
+		overflow: hidden;
+		.slider {
+			background-color: red;
+			padding: 10px;
+			display: block;
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+				margin-top: 10px;
+			}
+		}
+	}
+	.facebook {
+
+	}
+	.official {
+		width: 240px;
+		img {
+			width: 100%;
+		}
+	}
+}
