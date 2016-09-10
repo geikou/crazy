@@ -50,10 +50,128 @@ a {
 .main {
 	width: 720px;
 	height: 300px;
-	background-color: gray;
 	float: left;
 }
 
+
+.posts {
+	article {
+		width: 236px;
+		display: inline-block;
+		.posts-thumb {
+			float: left;
+			width: 100%;
+		}
+		.posts-info {
+			float: right;
+			width: 236px;
+			padding-top: 20px;
+			padding-left: 10px;
+			box-sizing: border-box;
+			.category {
+				display: inline-block;
+				color: white;
+				background-color: black;
+				border-radius: 5px;
+				padding: 8px;
+			}
+			.date {
+				display: inline-block;
+				margin-left: 20px;
+			}
+			.title {
+				font-size: 14px;
+				letter-spacing: 0.05em;
+				margin-top: 10px;
+				line-height: 1.4em;
+			}
+			.writer {
+				.writer-name {
+					display: inline-block;
+					vertical-align: middle;
+					.name {
+						display: block;
+						font-size: 16px;
+						width: 100%;
+						&:before {
+							content: 'WRITER';
+							color: #ccc;
+							display: inline-block;
+							font-size: 14px;
+							font-style: italic;
+							margin-right: 10px;
+							margin-bottom: 0.5em;
+						}
+					}
+				}
+				.writer-photo {
+					display: inline-block;
+					vertical-align: middle;
+					width: 80px;
+					border-radius: 50%;
+					display: none;
+				}
+			}
+		}
+		&:first-child {
+			width: 100%;
+			.posts-thumb {
+				float: left;
+				width: 474px;
+			}
+			.posts-info {
+				float: right;
+				width: 236px;
+				padding-top: 20px;
+				padding-left: 10px;
+				box-sizing: border-box;
+				.category {
+					display: inline-block;
+					color: white;
+					background-color: black;
+					border-radius: 5px;
+					padding: 8px;
+				}
+				.date {
+					display: inline-block;
+					margin-left: 20px;
+				}
+				.title {
+					font-size: 18px;
+					letter-spacing: 0.05em;
+					margin-top: 10px;
+					line-height: 1.4em;
+				}
+				.writer {
+					.writer-name {
+						display: inline-block;
+						vertical-align: middle;
+						.name {
+							display: block;
+							font-size: 16px;
+							width: 140px;
+							&:before {
+								content: 'WRITER';
+								color: #ccc;
+								display: block;
+								font-size: 14px;
+								font-style: italic;
+								margin-right: 10px;
+								margin-bottom: 0.5em;
+							}
+						}
+					}
+					.writer-photo {
+						display: inline-block;
+						vertical-align: middle;
+						width: 80px;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+}
 
 .footer {
 	width: 100%;
