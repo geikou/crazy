@@ -37,7 +37,7 @@ body {
 	}
 }
 
-.siderbar {
+.sidebar {
 	.instagram {
 		height: 550px;
 		width: 250px;
@@ -46,6 +46,8 @@ body {
 		.slider {
 			background-color: red;
 			padding: 10px;
+			display: block;
+			width: 100%;
 			img {
 				width: 100%;
 				height: auto;
