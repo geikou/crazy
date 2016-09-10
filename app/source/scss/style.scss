@@ -4,6 +4,7 @@
 @import 'base';
 @import 'clearfix';
 @import 'parts/sidebar';
+@import 'parts/topAnime';
 
 /* 以下にスタイルを記述
 ************************* */
@@ -24,18 +25,70 @@ a {
 		margin: 0 auto;
 		padding-bottom: 200px;
 		background: #fff;
-		.inner{
+		.inner {
 			width: 640px;
-			margin: 40px auto 40px;
-			font-size:1.3rem;
+			margin: 100px auto 40px;
+			font-size:1rem;
 			line-height:1.8rem;
+			.title {
+				font-size:1.3rem;
+				line-height:1.8rem;
+			}
 			.sub {
 				float: left;
 				font-size: 0;
+				margin: 20px 0 40px 0;
 				li {
 					display: inline-block;
 					font-size: 1rem;
 					margin-left: 10px;
+				}
+				.category {
+						color: white;
+						background-color: black;
+						border-radius: 5px;
+						padding: 8px;
+						margin-left: 40px;
+				}
+			}
+			.article {
+				img {
+					width: 640px;
+					margin:20px 0;
+				}
+				p {
+					margin: 20px 0;
+				}
+			}
+			.writer {
+				margin-top: 100px;
+				hr{
+					margin-bottom: 20px;
+				}
+				.writer-name {
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: 30px;
+					.name {
+						display: block;
+						font-size: 16px;
+						width: 100%;
+						&:before {
+							content: 'WRITER';
+							color: #ccc;
+							display: inline-block;
+							font-size: 14px;
+							font-style: italic;
+							margin-right: 10px;
+							margin-bottom: 0.5em;
+						}
+					}
+				}
+				.writer-photo {
+					display: inline-block;
+					vertical-align: middle;
+					width: 80px;
+					border-radius: 50%;
 				}
 			}
 		}
