@@ -7,6 +7,55 @@
 /* 以下にスタイルを記述
 ************************* */
 
-.red {
-	color: green;
+body {
+	font-family: YuGothic, '游ゴシック', sans-serif;
+	font-weight: bold;
+}
+
+.header {
+	width: 100vw;
+	height: 50vh;
+	background: url('../images/header/bg.jpg') center center/cover gray;
+	.gnav {
+		padding: 30px;
+		.logo {
+			float: left;
+			width: 200px;
+			img {
+				width: 100%;
+			}
+		}
+		.menu {
+			float: right;
+			font-size: 0;
+			li {
+				display: inline-block;
+				font-size: 1rem;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.main {
+	.instagram {
+		height: 550px;
+		width: 250px;
+		float: right;
+		overflow: hidden;
+		ul {
+			background-color: red;
+			padding: 10px;
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.footer {
+	text-align: center;
 }
