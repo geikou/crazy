@@ -47,6 +47,10 @@ a {
 	height: 50vh;
 	background: url('../images/header/bg.jpg') center center/cover gray;
 	.gnav {
+		position: fixed;
+		left: 50%;
+		margin-left: -500px;
+		width: 1000px;
 		padding: 30px;
 		.logo {
 			float: left;
@@ -61,7 +65,15 @@ a {
 			li {
 				display: inline-block;
 				font-size: 1rem;
-				margin-left: 10px;
+				margin-left: 24px;
+				a {
+					text-decoration: none;
+					color: #000;
+					font-size: 14px;
+					&:hover {
+						border-bottom: 3px #000 solid;
+					}
+				}
 			}
 		}
 	}
