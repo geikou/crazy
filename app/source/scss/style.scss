@@ -7,7 +7,6 @@
 
 /* 以下にスタイルを記述
 ************************* */
-
 body {
 	font-family: YuGothic, '游ゴシック', sans-serif;
 	font-weight: bold;
@@ -19,10 +18,11 @@ a {
 
 .wrapper {
 	width: 1000px;
-	margin: 0 auto;
+	margin: 30px auto 0px auto;
 	.main {
 		width: 720px;
 		margin: 0 auto;
+		padding-bottom: 200px;
 		background: #fff;
 		.inner{
 			width: 640px;
@@ -90,6 +90,7 @@ a {
 			width: 100%;
 		}
 		.posts-info {
+			position: relative;
 			float: right;
 			width: 236px;
 			padding-top: 20px;
@@ -100,11 +101,14 @@ a {
 				color: white;
 				background-color: black;
 				border-radius: 5px;
-				padding: 8px;
+				padding: 6px 8px;
+				font-size: 12px;
 			}
 			.date {
 				display: inline-block;
-				margin-left: 20px;
+				position: absolute;
+				top: 26px;
+				right: 0;
 			}
 			.title {
 				font-size: 14px;
@@ -120,14 +124,14 @@ a {
 					font-size: 12px;
 					.name {
 						display: block;
-						font-size: 16px;
+						font-size: 13px;
 						width: 100%;
 						&:before {
 							content: 'WRITER';
 							letter-spacing: .05em;
 							color: #ccc;
 							display: inline-block;
-							font-size: 14px;
+							font-size: 12px;
 							font-style: italic;
 							margin-right: 10px;
 							margin-bottom: 0.5em;
@@ -180,13 +184,13 @@ a {
 						float: none;
 						.name {
 							display: block;
-							font-size: 16px;
+							font-size: 14px;
 							width: 140px;
 							&:before {
 								content: 'WRITER';
 								color: #ccc;
 								display: block;
-								font-size: 14px;
+								font-size: 13px;
 								font-style: italic;
 								margin-right: 10px;
 								margin-bottom: 0.5em;
@@ -206,7 +210,56 @@ a {
 }
 
 .footer {
+	position: relative;
 	width: 100%;
-	text-align: center;
+	height: 200px;
+	margin-top: 600px;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	.footer-inner {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.logo-white {
+		padding: 20px 0 10px 0;
+		img {
+			width: 200px;
+			height: auto;
+		}
+	}
+	.category-list,
+	.info-list {
+		width: 700px;
+		float: left;
+		margin: 0 0 10px 0;
+		li {
+			float: left;
+		}
+		li+li {
+			margin-left: 10px;
+			padding-left: 10px;
+			border-left: 1px #fff solid;
+		}
+	}
+	.footer-right {
+		float: right;
+		width: 130px;
+		.sns-follow {
+			padding-left: 10px;
+			letter-spacing: 0.2em;
+		}
+		.sns-list {
+			margin-top: 10px;
+			li {
+				float: left;
+				margin-left: 10px;
+			}
+		}
+		.copyright {
+			margin: 20px 0 20px 8px;
+		}
+	}
+
 }
 
