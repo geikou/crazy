@@ -20,6 +20,26 @@ a {
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
+	.main {
+		width: 720px;
+		margin: 0 auto;
+		background: #fff;
+		.inner{
+			width: 640px;
+			margin: 40px auto 40px;
+			font-size:1.3rem;
+			line-height:1.8rem;
+			.sub {
+				float: left;
+				font-size: 0;
+				li {
+					display: inline-block;
+					font-size: 1rem;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
 }
 
 .header {
