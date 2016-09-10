@@ -125,8 +125,15 @@ a {
 	float: left;
 }
 
+.member-interview {
+	font-size: 0;
+	.member-interview-item {
+		display: inline-block;
+	}
+}
 
 .posts {
+	padding: 30px 0;
 	article {
 		width: 236px;
 		display: inline-block;
@@ -161,12 +168,15 @@ a {
 				.writer-name {
 					display: inline-block;
 					vertical-align: middle;
+					float: right;
+					font-size: 12px;
 					.name {
 						display: block;
 						font-size: 16px;
 						width: 100%;
 						&:before {
 							content: 'WRITER';
+							letter-spacing: .05em;
 							color: #ccc;
 							display: inline-block;
 							font-size: 14px;
@@ -187,6 +197,7 @@ a {
 		}
 		&:first-child {
 			width: 100%;
+			margin-bottom: 30px;
 			.posts-thumb {
 				float: left;
 				width: 474px;
@@ -218,6 +229,7 @@ a {
 					.writer-name {
 						display: inline-block;
 						vertical-align: middle;
+						float: none;
 						.name {
 							display: block;
 							font-size: 16px;
@@ -249,6 +261,4 @@ a {
 	width: 100%;
 	text-align: center;
 }
-
-
 
