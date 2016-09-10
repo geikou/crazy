@@ -8,7 +8,6 @@
 
 /* 以下にスタイルを記述
 ************************* */
-
 body {
 	font-family: YuGothic, '游ゴシック', sans-serif;
 	font-weight: bold;
@@ -16,10 +15,11 @@ body {
 
 .wrapper {
 	width: 1000px;
-	margin: 0 auto;
+	margin: 30px auto 0px auto;
 	.main {
 		width: 720px;
 		margin: 0 auto;
+		padding-bottom: 200px;
 		background: #fff;
 		.inner {
 			width: 640px;
@@ -104,7 +104,16 @@ body {
 	width: 100vw;
 	height: 50vh;
 	background: url('../images/header/bg.jpg') center center/cover gray;
+	.nav-bg {
+		width: 100vw;
+		height: 80px;
+		background-color: liner-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0));
+	}
 	.gnav {
+		position: fixed;
+		left: 50%;
+		margin-left: -500px;
+		width: 1000px;
 		padding: 30px;
 		.logo {
 			float: left;
@@ -119,7 +128,15 @@ body {
 			li {
 				display: inline-block;
 				font-size: 1rem;
-				margin-left: 10px;
+				margin-left: 24px;
+				a {
+					text-decoration: none;
+					color: #000;
+					font-size: 14px;
+					&:hover {
+						border-bottom: 3px #000 solid;
+					}
+				}
 			}
 		}
 	}
@@ -148,6 +165,7 @@ body {
 			width: 100%;
 		}
 		.posts-info {
+			position: relative;
 			float: right;
 			width: 236px;
 			padding-top: 20px;
@@ -158,7 +176,8 @@ body {
 				color: white;
 				background-color: black;
 				border-radius: 5px;
-				padding: 8px;
+				padding: 6px 8px;
+				font-size: 12px;
 				transition: all .3s;
 			}
 			.category:hover {
@@ -167,7 +186,9 @@ body {
 			}
 			.date {
 				display: inline-block;
-				margin-left: 20px;
+				position: absolute;
+				top: 26px;
+				right: 0;
 			}
 			.title {
 				font-size: 14px;
@@ -183,14 +204,14 @@ body {
 					font-size: 12px;
 					.name {
 						display: block;
-						font-size: 16px;
+						font-size: 13px;
 						width: 100%;
 						&:before {
 							content: 'WRITER';
 							letter-spacing: .05em;
 							color: #ccc;
 							display: inline-block;
-							font-size: 14px;
+							font-size: 12px;
 							font-style: italic;
 							margin-right: 10px;
 							margin-bottom: 0.5em;
@@ -243,13 +264,13 @@ body {
 						float: none;
 						.name {
 							display: block;
-							font-size: 16px;
+							font-size: 14px;
 							width: 140px;
 							&:before {
 								content: 'WRITER';
 								color: #ccc;
 								display: block;
-								font-size: 14px;
+								font-size: 13px;
 								font-style: italic;
 								margin-right: 10px;
 								margin-bottom: 0.5em;
@@ -269,7 +290,56 @@ body {
 }
 
 .footer {
+	position: relative;
 	width: 100%;
-	text-align: center;
+	height: 200px;
+	margin-top: 600px;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	.footer-inner {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.logo-white {
+		padding: 20px 0 10px 0;
+		img {
+			width: 200px;
+			height: auto;
+		}
+	}
+	.category-list,
+	.info-list {
+		width: 700px;
+		float: left;
+		margin: 0 0 10px 0;
+		li {
+			float: left;
+		}
+		li+li {
+			margin-left: 10px;
+			padding-left: 10px;
+			border-left: 1px #fff solid;
+		}
+	}
+	.footer-right {
+		float: right;
+		width: 130px;
+		.sns-follow {
+			padding-left: 10px;
+			letter-spacing: 0.2em;
+		}
+		.sns-list {
+			margin-top: 10px;
+			li {
+				float: left;
+				margin-left: 10px;
+			}
+		}
+		.copyright {
+			margin: 20px 0 20px 8px;
+		}
+	}
+
 }
 
