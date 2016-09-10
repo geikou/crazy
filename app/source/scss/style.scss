@@ -117,9 +117,10 @@ body {
 	height: 50vh;
 	background: url('../images/header/bg.jpg') center center/cover gray;
 	.nav-bg {
+		position: fixed;
 		width: 100vw;
-		height: 80px;
-		background-color: liner-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0));
+		height: 100px;
+		background: linear-gradient(rgba(255,255,255,0.35),rgba(0,0,0,0));
 	}
 	.gnav {
 		position: fixed;
