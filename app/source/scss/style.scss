@@ -3,6 +3,7 @@
 @import 'mixin';
 @import 'base';
 @import 'clearfix';
+@import 'parts/sidebar';
 
 /* 以下にスタイルを記述
 ************************* */
@@ -13,7 +14,12 @@ body {
 }
 
 a {
-	
+
+}
+
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
 }
 
 .header {
@@ -42,49 +48,17 @@ a {
 }
 
 .main {
-	width: calc( 100% - 250px );
+	width: 720px;
 	height: 300px;
 	background-color: gray;
 	float: left;
 }
 
-.sidebar {
-	float: right;
-	width: 250px;
-	.recruit {
-		img {
-			width: 100%;
-		}
-	}
-	.instagram {
-		height: 550px;
-		width: 250px;
-		overflow: hidden;
-		.slider {
-			background-color: red;
-			padding: 10px;
-			display: block;
-			width: 100%;
-			img {
-				width: 100%;
-				height: auto;
-				display: block;
-				margin-top: 10px;
-			}
-		}
-	}
-	.facebook {
-
-	}
-	.official {
-		width: 250px;
-		img {
-			width: 100%;
-		}
-	}
-}
 
 .footer {
 	width: 100%;
 	text-align: center;
 }
+
+
+
