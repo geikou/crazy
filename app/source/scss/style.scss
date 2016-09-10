@@ -13,10 +13,6 @@ body {
 	font-weight: bold;
 }
 
-a {
-
-}
-
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
@@ -48,6 +44,11 @@ a {
 						border-radius: 5px;
 						padding: 8px;
 						margin-left: 40px;
+						transition: all .3s;
+				}
+				.category:hover {
+					color: #333;
+					background-color: #ddd;
 				}
 			}
 			.article {
@@ -90,6 +91,10 @@ a {
 					border-radius: 50%;
 				}
 			}
+		}
+		a {
+			text-decoration:none;
+			color: #fff;
 		}
 	}
 }
@@ -153,6 +158,11 @@ a {
 				background-color: black;
 				border-radius: 5px;
 				padding: 8px;
+				transition: all .3s;
+			}
+			.category:hover {
+				color: #333;
+				background-color: #ddd;
 			}
 			.date {
 				display: inline-block;
