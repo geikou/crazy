@@ -37,11 +37,18 @@ body {
 	}
 }
 
+.main {
+	width: calc( 100% - 250px );
+	height: 300px;
+	background-color: gray;
+	float: left;
+}
+
 .sidebar {
+	float: right;
 	.instagram {
 		height: 550px;
 		width: 250px;
-		float: right;
 		overflow: hidden;
 		.slider {
 			background-color: red;
