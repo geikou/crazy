@@ -16,6 +16,103 @@ body {
   font-family: 'Satisfy', cursive;
 }
 
+.main {
+  width: 720px;
+  float: left;
+}
+
+.posts {
+  font-size: 0;
+  .post {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1rem;
+    .post-date {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      .post-date-month {
+        font-size: 15px;
+        display: block;
+        &:after {
+          content: '/';
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+      .post-date-day {
+        font-size: 27px;
+        font-weight: bold;
+        display: block;
+      }
+      .post-date-youbi {
+        font-size: 17px;
+        display: block;
+      }
+    }
+
+    &:first-child {
+      position: relative;
+      width: 100%;
+      .post-thumb {
+        width: 630px;
+        height: 300px;
+        float: right;
+        .post-thumb-img {
+          width: 100%;
+          height: 100%;
+        }
+        .post-category {
+          position: absolute;
+          top: 10px;
+          left: 45px;
+        }
+      }
+      &.interview .post-category:before {
+        content: url('../images/top/posts/writer/profile.png');
+      }
+      .post-info {
+        position: absolute;
+        top: 100px;
+        box-sizing: border-box;
+        width: 50%;
+        height: 180px;
+        padding: 20px;
+        background-color: rgba(0,0,0,.85);
+        color: $white;
+        .post-title {
+          font-size: 18px;
+          letter-spacing: .1em;
+          line-height: 1.4em;
+          text-align: justify;
+        }
+        .post-writer {
+          position: absolute;
+          bottom: 20px;
+          .post-writer-photo {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            border-radius: 50%;
+          }
+          .post-writer-info {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            .post-writer-title {
+              font-style: italic;
+            }
+            .post-writer-name {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .wrapper {
   width: 1000px;
   margin: 30px auto 0px auto;
@@ -99,150 +196,6 @@ body {
     a {
       text-decoration:none;
       color: #fff;
-    }
-  }
-}
-
-.main {
-  width: 720px;
-  float: left;
-}
-
-.posts {
-  article {
-    width: 236px;
-    display: inline-block;
-    .posts-thumb {
-      float: left;
-      width: 100%;
-    }
-    .article-link {
-      color: #333;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    .posts-info {
-      position: relative;
-      float: right;
-      width: 236px;
-      padding-top: 20px;
-      padding-left: 10px;
-      box-sizing: border-box;
-      .category {
-        display: inline-block;
-        color: $white;
-        background-color: $black;
-        border-radius: 5px;
-        padding: 6px 8px;
-        font-size: 12px;
-        transition: all .3s;
-      }
-      .category:hover {
-        color: #333;
-        background-color: #ddd;
-      }
-      .date {
-        display: inline-block;
-        position: absolute;
-        top: 26px;
-        right: 0;
-      }
-      .title {
-        font-size: 14px;
-        letter-spacing: 0.05em;
-        margin-top: 10px;
-        line-height: 1.4em;
-      }
-      .writer {
-        .writer-name {
-          display: inline-block;
-          vertical-align: middle;
-          float: right;
-          font-size: 12px;
-          .name {
-            display: block;
-            font-size: 13px;
-            width: 100%;
-            &:before {
-              content: 'WRITER';
-              letter-spacing: .05em;
-              color: #ccc;
-              display: inline-block;
-              font-size: 12px;
-              font-style: italic;
-              margin-right: 10px;
-              margin-bottom: 0.5em;
-            }
-          }
-        }
-        .writer-photo {
-          display: inline-block;
-          vertical-align: middle;
-          width: 80px;
-          border-radius: 50%;
-          display: none;
-        }
-      }
-    }
-    &:first-child {
-      width: 100%;
-      margin-bottom: 30px;
-      .posts-thumb {
-        float: left;
-        width: 474px;
-      }
-      .posts-info {
-        float: right;
-        width: 236px;
-        padding-top: 20px;
-        padding-left: 10px;
-        box-sizing: border-box;
-        .category {
-          display: inline-block;
-          color: $white;
-          background-color: $black;
-          border-radius: 5px;
-          padding: 8px;
-        }
-        .date {
-          display: inline-block;
-          margin-left: 20px;
-        }
-        .title {
-          font-size: 18px;
-          letter-spacing: 0.05em;
-          margin-top: 10px;
-          line-height: 1.4em;
-        }
-        .writer {
-          .writer-name {
-            display: inline-block;
-            vertical-align: middle;
-            float: none;
-            .name {
-              display: block;
-              font-size: 14px;
-              width: 140px;
-              &:before {
-                content: 'WRITER';
-                color: #ccc;
-                display: block;
-                font-size: 13px;
-                font-style: italic;
-                margin-right: 10px;
-                margin-bottom: 0.5em;
-              }
-            }
-          }
-          .writer-photo {
-            display: inline-block;
-            vertical-align: middle;
-            width: 80px;
-            border-radius: 50%;
-          }
-        }
-      }
     }
   }
 }
