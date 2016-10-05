@@ -13,6 +13,10 @@ body {
   font-weight: bold;
 }
 
+.font-teko {
+  font-family: 'Teko', sans-serif;
+}
+
 .font-sati {
   font-family: 'Satisfy', cursive;
 }
@@ -35,22 +39,29 @@ body {
     }
     .post-date {
       position: absolute;
+      font-family: teko;
+      font-weight: 300;
+      line-height: 1.5em;
+      color: #555555;
       .post-date-month {
-        font-size: 15px;
-        display: block;
+        font-size: 22px;
+        display: inline-block;
+        vertical-align: top;
         &:after {
           content: '/';
           display: inline-block;
-          margin-left: 5px;
+          vertical-align: top;
+          margin-left: 2px;
         }
       }
       .post-date-day {
-        font-size: 27px;
-        font-weight: bold;
+        font-size: 34px;
         display: block;
       }
       .post-date-youbi {
-        font-size: 17px;
+        font-size: 24px;
+        letter-spacing: .6px;
+        color: #bebebe;
         display: block;
       }
     }
@@ -58,25 +69,30 @@ body {
       width: 300px;
       margin-left: 350px - 300px;
       color: $black;
+      position: relative;
+      .post-category {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0);
+
+        &:after {
+          position: relative;
+          display: inline-block;
+          color: $white;
+          padding: 6px 12px;
+          background-color: rgba(0,0,0,.7);
+          z-index: 1;
+        }
+      }
       .post-thumb {
         width: 100%;
         position: relative;
-        .post-category {
-          position: relative;
-          display: block;
-          &:before {
-            position: absolute;
-            display: inline-block;
-            top: -4px;
-            left: -4px;
-            color: $white;
-            padding: 6px 12px;
-            background-color: rgba(0,0,0,.7);
-          }
-        }
+        overflow: hidden;
         .post-thumb-img {
           float: right;
           width: 100%;
+          transition: all .2s;
         }
       }
       .post-info {
@@ -84,6 +100,7 @@ body {
           margin-top: 10px;
           letter-spacing: .1em;
           line-height: 1.4em;
+          text-decoration: none;
         }
         .post-writer {
           .post-writer-photo {
@@ -105,11 +122,24 @@ body {
         }
       }
     }
-    &.interview .post-category:before { content: 'インタビュー'; }
-    &.report .post-category:before { content: 'レポート'; }
-    &.daily .post-category:before { content: '日々'; }
-    &.pr .post-category:before { content: '広報'; }
-    &.think .post-category:before { content: '考える'; }
+    // &:hover {
+    //   text-decoration: none;
+    //   .post-thumb {
+    //     .post-thumb-img {
+    //       transform: scale(1.05);
+    //     }
+    //   }
+    //   .post-info {
+    //     .post-title {
+    //       // text-decoration: underline;
+    //     }
+    //   }
+    // }
+    &.interview .post-category:after { content: 'インタビュー'; }
+    &.report .post-category:after { content: 'レポート'; }
+    &.daily .post-category:after { content: '日々'; }
+    &.pr .post-category:after { content: '広報'; }
+    &.think .post-category:after { content: '考える'; }
 
     &:first-child {
       position: relative;
@@ -119,19 +149,20 @@ body {
         margin-left: 0;
         padding-left: calc( 100% - 630px );
         box-sizing: border-box;
+        .post-category {
+          position: absolute;
+          &:after {
+            position: absolute;
+            top: 45px;
+            left: 28px;
+            background-color: rgba(0,0,0,0);
+          }
+        }
         .post-thumb {
           width: 630px;
           height: 360px;
           .post-thumb-img {
             width: 100%;
-          }
-          .post-category {
-            &:before {
-              position: absolute;
-              top: 45px;
-              left: -65px;
-              background-color: rgba(0,0,0,0);
-            }
           }
         }
         .post-info {
@@ -179,11 +210,11 @@ body {
         }
       }
 
-      &.interview .post-category:before { content: url('../images/contents/category/interview.png'); }
-      &.report .post-category:before { content: url('../images/contents/category/report.png'); }
-      &.think .post-category:before { content: url('../images/contents/category/think.png'); }
-      &.daily .post-category:before { content: url('../images/contents/category/daily.png'); }
-      &.pr .post-category:before { content: url('../images/contents/category/pr.png'); }
+      &.interview .post-category:after { content: url('../images/contents/category/interview.png'); }
+      &.report .post-category:after { content: url('../images/contents/category/report.png'); }
+      &.think .post-category:after { content: url('../images/contents/category/think.png'); }
+      &.daily .post-category:after { content: url('../images/contents/category/daily.png'); }
+      &.pr .post-category:after { content: url('../images/contents/category/pr.png'); }
     }
   }
 }
@@ -191,86 +222,86 @@ body {
 .wrapper {
   width: 1024px;
   margin: 30px auto 0px auto;
-  .main {
-    width: 720px;
-    margin: 0 auto;
-    padding-bottom: 200px;
-    background: #fff;
-    .inner {
-      width: 640px;
-      margin: 100px auto 40px;
-      font-size:1rem;
-      line-height:1.8rem;
-      .title {
-        font-size:1.3rem;
-        line-height:1.8rem;
-      }
-      .sub {
-        float: left;
-        font-size: 0;
-        margin: 20px 0 40px 0;
-        li {
-          display: inline-block;
-          font-size: 1rem;
-          margin-left: 10px;
-        }
-        .category {
-            color: $white;
-            background-color: $black;
-            border-radius: 5px;
-            padding: 8px;
-            margin-left: 40px;
-            transition: all .3s;
-        }
-        .category:hover {
-          color: #333;
-          background-color: #ddd;
-        }
-      }
-      .article {
-        img {
-          width: 640px;
-          margin:20px 0;
-        }
-        p {
-          margin: 20px 0;
-        }
-      }
-      .writer {
-        margin-top: 100px;
-        hr {
-          margin-bottom: 20px;
-        }
-        .writer-name {
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 30px;
-          .name {
-            display: block;
-            font-size: 16px;
-            width: 100%;
-            &:before {
-              content: 'WRITER';
-              color: #ccc;
-              display: inline-block;
-              font-size: 14px;
-              font-style: italic;
-              margin-right: 10px;
-              margin-bottom: 0.5em;
-            }
-          }
-        }
-        .writer-photo {
-          display: inline-block;
-          vertical-align: middle;
-          width: 80px;
-          border-radius: 50%;
-        }
-      }
-    }
-    a {
-      text-decoration:none;
-      color: #fff;
-    }
-  }
+  // .main {
+  //   width: 720px;
+  //   margin: 0 auto;
+  //   padding-bottom: 200px;
+  //   background: #fff;
+  //   .inner {
+  //     width: 640px;
+  //     margin: 100px auto 40px;
+  //     font-size:1rem;
+  //     line-height:1.8rem;
+  //     .title {
+  //       font-size:1.3rem;
+  //       line-height:1.8rem;
+  //     }
+  //     .sub {
+  //       float: left;
+  //       font-size: 0;
+  //       margin: 20px 0 40px 0;
+  //       li {
+  //         display: inline-block;
+  //         font-size: 1rem;
+  //         margin-left: 10px;
+  //       }
+  //       .category {
+  //           color: $white;
+  //           background-color: $black;
+  //           border-radius: 5px;
+  //           padding: 8px;
+  //           margin-left: 40px;
+  //           transition: all .3s;
+  //       }
+  //       .category:hover {
+  //         color: #333;
+  //         background-color: #ddd;
+  //       }
+  //     }
+  //     .article {
+  //       img {
+  //         width: 640px;
+  //         margin:20px 0;
+  //       }
+  //       p {
+  //         margin: 20px 0;
+  //       }
+  //     }
+  //     .writer {
+  //       margin-top: 100px;
+  //       hr {
+  //         margin-bottom: 20px;
+  //       }
+  //       .writer-name {
+  //         display: inline-block;
+  //         vertical-align: middle;
+  //         margin-left: 30px;
+  //         .name {
+  //           display: block;
+  //           font-size: 16px;
+  //           width: 100%;
+  //           &:before {
+  //             content: 'WRITER';
+  //             color: #ccc;
+  //             display: inline-block;
+  //             font-size: 14px;
+  //             font-style: italic;
+  //             margin-right: 10px;
+  //             margin-bottom: 0.5em;
+  //           }
+  //         }
+  //       }
+  //       .writer-photo {
+  //         display: inline-block;
+  //         vertical-align: middle;
+  //         width: 80px;
+  //         border-radius: 50%;
+  //       }
+  //     }
+  //   }
+  //   a {
+  //     text-decoration:none;
+  //     color: #fff;
+  //   }
+  // }
 }
