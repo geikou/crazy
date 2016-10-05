@@ -5,6 +5,7 @@
 @import 'clearfix';
 @import 'parts/header';
 @import 'parts/sidebar';
+@import 'parts/footer';
 
 
 body {
@@ -24,14 +25,16 @@ body {
 .posts {
   font-size: 0;
   .post {
-    width: 50%;
+    width: 350px;
     display: inline-block;
     vertical-align: top;
     font-size: 1rem;
+    margin-bottom: 50px;
+    &:nth-child(even) {
+      margin-right: 20px;
+    }
     .post-date {
-      display: inline-block;
-      vertical-align: top;
-      text-align: center;
+      position: absolute;
       .post-date-month {
         font-size: 15px;
         display: block;
@@ -51,70 +54,142 @@ body {
         display: block;
       }
     }
-
-    &:first-child {
-      position: relative;
-      width: 100%;
+    .post-anchor {
+      width: 300px;
+      margin-left: 350px - 300px;
+      color: $black;
       .post-thumb {
-        width: 630px;
-        height: 300px;
-        float: right;
-        .post-thumb-img {
-          width: 100%;
-          height: 100%;
-        }
+        width: 100%;
+        position: relative;
         .post-category {
-          position: absolute;
-          top: 10px;
-          left: 45px;
+          position: relative;
+          display: block;
+          &:before {
+            position: absolute;
+            display: inline-block;
+            top: -4px;
+            left: -4px;
+            color: $white;
+            padding: 6px 12px;
+            background-color: rgba(0,0,0,.7);
+          }
         }
-      }
-      &.interview .post-category:before {
-        content: url('../images/top/posts/writer/profile.png');
+        .post-thumb-img {
+          float: right;
+          width: 100%;
+        }
       }
       .post-info {
-        position: absolute;
-        top: 100px;
-        box-sizing: border-box;
-        width: 50%;
-        height: 180px;
-        padding: 20px;
-        background-color: rgba(0,0,0,.85);
-        color: $white;
         .post-title {
-          font-size: 18px;
+          margin-top: 10px;
           letter-spacing: .1em;
           line-height: 1.4em;
-          text-align: justify;
         }
         .post-writer {
-          position: absolute;
-          bottom: 20px;
           .post-writer-photo {
-            display: inline-block;
-            vertical-align: middle;
-            width: 40px;
-            border-radius: 50%;
+            display: none;
           }
           .post-writer-info {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 10px;
+            text-align: right;
             .post-writer-title {
-              font-style: italic;
+              color: gray;
+              margin-right: 10px;
+              display: inline-block;
+              font-size: 13px;
             }
             .post-writer-name {
               display: inline-block;
+              font-size: 14px;
             }
           }
         }
       }
     }
+    &.interview .post-category:before { content: 'インタビュー'; }
+    &.report .post-category:before { content: 'レポート'; }
+    &.daily .post-category:before { content: '日々'; }
+    &.pr .post-category:before { content: '広報'; }
+    &.think .post-category:before { content: '考える'; }
+
+    &:first-child {
+      position: relative;
+      width: 720px;
+      .post-anchor {
+        width: 100%;
+        margin-left: 0;
+        padding-left: calc( 100% - 630px );
+        box-sizing: border-box;
+        .post-thumb {
+          width: 630px;
+          height: 360px;
+          .post-thumb-img {
+            width: 100%;
+          }
+          .post-category {
+            &:before {
+              position: absolute;
+              top: 45px;
+              left: -65px;
+              background-color: rgba(0,0,0,0);
+            }
+          }
+        }
+        .post-info {
+          position: absolute;
+          top: 169px;
+          left: 0;
+          box-sizing: border-box;
+          width: 46%;
+          height: 169px;
+          padding: 10px 20px;
+          background-color: rgba(0,0,0,.75);
+          color: $white;
+          .post-title {
+            font-size: 16px;
+            letter-spacing: .1em;
+            line-height: 1.6em;
+            text-align: justify;
+          }
+          .post-writer {
+            position: absolute;
+            line-height: 1.2em;
+            bottom: 20px;
+            .post-writer-photo {
+              display: inline-block;
+              vertical-align: middle;
+              width: 40px;
+              border-radius: 50%;
+            }
+            .post-writer-info {
+              margin-left: 10px;
+              display: inline-block;
+              vertical-align: middle;
+              text-align: left;
+              .post-writer-title {
+                display: block;
+                font-style: italic;
+                font-size: 12px;
+              }
+              .post-writer-name {
+                display: block;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      &.interview .post-category:before { content: url('../images/contents/category/interview.png'); }
+      &.report .post-category:before { content: url('../images/contents/category/report.png'); }
+      &.think .post-category:before { content: url('../images/contents/category/think.png'); }
+      &.daily .post-category:before { content: url('../images/contents/category/daily.png'); }
+      &.pr .post-category:before { content: url('../images/contents/category/pr.png'); }
+    }
   }
 }
 
 .wrapper {
-  width: 1000px;
+  width: 1024px;
   margin: 30px auto 0px auto;
   .main {
     width: 720px;
@@ -199,56 +274,3 @@ body {
     }
   }
 }
-
-.footer {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  background: #000;
-  color: #fff;
-  font-size: 12px;
-  .footer-inner {
-    width: 1000px;
-    margin: 0 auto;
-  }
-  .logo-white {
-    padding: 20px 0 10px 0;
-    img {
-      width: 200px;
-      height: auto;
-    }
-  }
-  .category-list,
-  .info-list {
-    width: 700px;
-    float: left;
-    margin: 0 0 10px 0;
-    li {
-      float: left;
-    }
-    li+li {
-      margin-left: 10px;
-      padding-left: 10px;
-      border-left: 1px #fff solid;
-    }
-  }
-  .footer-right {
-    float: right;
-    width: 130px;
-    .sns-follow {
-      padding-left: 10px;
-      letter-spacing: 0.2em;
-    }
-    .sns-list {
-      margin-top: 10px;
-      li {
-        float: left;
-        margin-left: 10px;
-      }
-    }
-    .copyright {
-      margin: 20px 0 20px 8px;
-    }
-  }
-}
-
