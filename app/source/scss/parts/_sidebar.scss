@@ -2,64 +2,79 @@
 	float: right;
 	width: 262px;
 	.sidebar-title {
-		width: 100%;
-		font-size: 22px;
-		font-weight: bold;
 		margin-bottom: 15px;
-		border-bottom: 4px solid $black;
+		color: gray;
+		font-size: 26px;
+		letter-spacing: .6px;
 	}
 	.sidebar-item {
 		margin-bottom: 30px;
-	}
-	.popular-posts {
-		width: 100%;
-		article {
-			margin-top: 5px;
-		}
-		.popular-post-thumb {
-			float: left;
-			width: 62px;
-			height: 62px;
-			overflow: hidden;
-			position: relative;
-			img {
-				height: 100%;
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
-
+		border: 1px solid gray;
+		padding: 20px 12px;
+		box-sizing: border-box;
+		&.popular-posts {
+			width: 100%;
+			font-size: 0;
+			article {
+				margin-top: 10px;
+			}
+			.popular-post-thumb {
+				display: inline-block;
+				vertical-align: middle;
+				width: 62px;
+				height: 62px;
+				overflow: hidden;
+				position: relative;
+				img {
+					height: 100%;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			.popular-post-title {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 13px;
+				line-height: 1.4em;
+				width: calc( 100% - ( 62px + 10px ) );
+				margin-left: 10px;
 			}
 		}
-		.popular-post-title {
-			float: right;
-			width: calc( 100% - 62px - 10px );
-		}
-	}
-	.instagram {
-		margin: 10px 0;
-		.instagram-wrapper {
-			width: 100%;
-			height: 550px;
-			padding: 8px;
-			box-sizing: border-box;
-			overflow: hidden;
-			.slider {
-				display: block;
+		&.instagram {
+			margin: 10px 0;
+			.instagram-wrapper {
 				width: 100%;
-				img {
-					width: 100%;
-					height: auto;
+				height: 550px;
+				box-sizing: border-box;
+				overflow: hidden;
+				.slider {
 					display: block;
-					margin-top: 10px;
+					width: 100%;
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+						margin-top: 10px;
+					}
 				}
 			}
 		}
-	}
-	.company {
-		width: 100%;
-		.banner {
+		&.company {
 			width: 100%;
+			position: relative;
+			.banner {
+				width: 100%;
+				&:not(:first-child) {
+					margin-top: 20px; // todo: 現状、一個目もmarginついちゃう
+				}
+			}
+			.checkit {
+				width: 130px;
+				position: absolute;
+				top: 40px;
+				right: -20px;
+			}
 		}
-		.facebook {}
 	}
 }
