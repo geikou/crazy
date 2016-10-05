@@ -3,6 +3,7 @@
   overflow: hidden;
   text-align: center;
   top: 0;
+  z-index: 10;
   .portrait-visual {
     width: 100%;
     min-width: 1980px;
@@ -42,23 +43,22 @@
         width: 36px;
         height: 36px;
         line-height: 36px;
-
-
         border-radius: 50%;
-        background-color: lightgray;
-
         text-align: center;
+        color: $white;
       }
       .search-form {
         display: inline-block;
         vertical-align: top;
         font-size: 14px;
         height: 36px;
-        width: 250px;
+        width: 180px;
         box-sizing: border-box;
         padding: 10px 35px 10px 15px;
         border-radius: 25px;
-        border: 0;
+        border: 2px solid $white;
+        background-color: rgba(255,255,255,.3);
+        color: $white;
       }
     }
     .logo {
@@ -74,7 +74,7 @@
           font-size: 16px;
           text-decoration: none;
           padding-bottom: 6px;
-          border-bottom: 4px solid $white;
+          border-bottom: 2px solid $white;
         }
       }
     }
@@ -86,14 +86,17 @@
     background-color: $white;
     position: fixed;
     z-index: 2;
-    border-bottom: 1px solid $black; // todo: 仮置きしてる
+    border-bottom: 2px solid $black;
     .portrait-visual {
       display: none;
     }
     .gnav {
       .search {
+        .search-button {
+          color: $black;
+        }
         .search-form {
-          border: 1px solid lightgray;
+          border: 2px solid $black;
         }
       }
       .logo {
