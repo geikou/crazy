@@ -1,16 +1,14 @@
 .a-text {
-  a {
-    color: inherit;
-    transition: color .2s;
-    &:hover {
-      color: $green;
-    }
+  color: inherit;
+  transition: color .2s ease-in-out;
+  &:hover {
+    color: $green;
   }
 }
 
 .a-img {
   overflow: hidden;
-  transition: all .2s;
+  transition: all .3s ease-in-out;
   &:hover {
     transform: scale(1.05);
   }
