@@ -108,6 +108,7 @@ body {
           text-decoration: none;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+          @extend .a-text;
         }
         .post-writer {
           -webkit-backface-visibility: hidden;
@@ -126,6 +127,7 @@ body {
             .post-writer-name {
               display: inline-block;
               font-size: 14px;
+              @extend .a-text;
             }
           }
         }
