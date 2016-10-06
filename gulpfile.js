@@ -76,6 +76,9 @@ var copyPaths = [
 	}, {
 		from: './app/source/plugins/**/*',
 		to: './app/public/plugins'
+	}, {
+		from: './app/source/videos/**/*',
+		to: './app/public/videos'
 	}
 ];
 
