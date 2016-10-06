@@ -9,17 +9,13 @@
 
 
 body {
-  font-family: YuGothic, '游ゴシック', sans-serif;
+  font-family: 'Lato', YuGothic, '游ゴシック', sans-serif;
   font-weight: bold;
 }
 
-.font-teko {
-  font-family: 'Teko', sans-serif;
-}
-
-.font-sati {
-  font-family: 'Satisfy', cursive;
-}
+.main {
+  width: 720px;
+  float: left;
 
 .wrapper {
   width: 1024px;
@@ -43,7 +39,6 @@ body {
     }
     .post-date {
       position: absolute;
-      font-family: teko;
       font-weight: 300;
       line-height: 1.5em;
       color: #555555;
