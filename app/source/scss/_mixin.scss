@@ -1,8 +1,10 @@
-.a-green {
-  color: inherit;
-  transition: color .2s;
-  &:hover {
-    color: $green;
+.a-text {
+  a {
+    color: inherit;
+    transition: color .2s;
+    &:hover {
+      color: $green;
+    }
   }
 }
 
@@ -11,5 +13,17 @@
   transition: all .2s;
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+
+.a-focus {
+  transition: border-color .2s;
+  &:hover {
+    border-color: $green;
+  }
+  &:focus {
+    border-color: $green;
+    outline: 0;
   }
 }
