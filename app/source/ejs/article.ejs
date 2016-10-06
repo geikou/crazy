@@ -1,86 +1,55 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
-	<% include _head %>
+  <% include _head %>
 </head>
-<body class="clearfix">
-<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <% include _header %>
+  <div class="wrapper clearfix">
+    <main class="main">
+      <section class="posts">
 
-	
-	<% include _header %>
-	<div class="wrapper clearfix">
-		<main class="main">
-			<section class="inner">
-				<div class="title">
-					<p class="title">＜CRAZY LIFE LAB＞成功が約束された９０点の未来か、失敗するかもしれない１００点を超える未来か</p>
-					<ul class="sub clearfix">
-	       				<li class="date">2016/09/10</li>
-	                 	<li class="category"><a href="">レポート</a></li>
-	      			</ul>
-      			</div>
-      			<div class="article">
-      				<img class="eyecatch" src="./images/article/eyecatch.jpg">
-      				<p>卒業が近づいたら“就活”をする<br>それに違和感を感じたことなんてなかった</p> 
-					<p>誰が決めたのだろう<br>誰かが決めたとして、なぜそれに自分は従う必要があるのだろう<br>そんな疑問をよく考える暇もなく、カレンダーは説明会の予定だらけ<br>今日も期待よりも不安を抱えて、家を出る</p>
-					<img class="img1" src="./images/article/img1.jpg">
-					<p>いい会社、いい仕事、いいキャリア<br>考えれば考えるほど、ふと浮かんでくる疑問がある<br>人生に正解なんてあるのだろうか？</p>
-      			</div>
-      			<div class="writer">
-      				<hr>
-      				<img class="writer-photo" src="http://wadaiko-sai.com/wp-content/uploads/2013/01/%E6%B8%A1%E8%BE%BA%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E5%86%99%E7%9C%9F.png">
-					<div class="writer-name">
-						<span class="name">渡辺さゆり</span>
-					</div>
-				</div>
-			</section>
+			<article class="single-post">
+				<h1></h1>
+				<h2></h2>
+				<h3></h3>
+				<h4></h4>
+				<h5></h5>
+				<h6></h6>
+				<p></p>
+				<a href=""></a>
+				<ul>
+					<li></li>
+				</ul>
+				<ol>
+					<li></li>
+				</ol>
+				<table>
+					<tr>
+						<th></th>
+						<td></td>
+					</tr>
+				</table>
+				<blockquote></blockquote>
+				<img src="">
+				<strong></strong>
+				<em></em>
+			</article>
 
-		</main>
-
-		<aside class="sidebar">
-			<section class="recruit">
-				<img src="./images/recruit/recruit.png">
-			</section>
-			<section class="instagram">
-				<div class="js-slider slider">
-					<img src="./images/instagram/i1.jpg">
-					<img src="./images/instagram/i2.jpg">
-					<img src="./images/instagram/i3.jpg">
-					<img src="./images/instagram/i4.jpg">
-					<img src="./images/instagram/i5.jpg">
-					<img src="./images/instagram/i6.jpg">
-					<img src="./images/instagram/i7.jpg">
-					<img src="./images/instagram/i1.jpg">
-					<img src="./images/instagram/i2.jpg">
-					<img src="./images/instagram/i3.jpg">
-					<img src="./images/instagram/i4.jpg">
-					<img src="./images/instagram/i5.jpg">
-					<img src="./images/instagram/i6.jpg">
-					<img src="./images/instagram/i7.jpg">
-					<img src="./images/instagram/i1.jpg">
-					<img src="./images/instagram/i2.jpg">
-					<img src="./images/instagram/i3.jpg">
-					<img src="./images/instagram/i4.jpg">
-					<img src="./images/instagram/i5.jpg">
-					<img src="./images/instagram/i6.jpg">
-					<img src="./images/instagram/i7.jpg">
-				</div>
-			</section>
-			<section class="facebook">
-				<div class="fb-page" data-href="https://www.facebook.com/crazyincjapan" data-width="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/crazyincjapan" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/crazyincjapan">CRAZY, Inc.（株式会社CRAZY）</a></blockquote></div>
-			</section>
-			<section class="official">
-				<img src="./images/crazy/crazy.png">
-			</section>
-		</aside>
-	</div>
-	<% include _footer %>
-	<% include _script %>
+      </section>
+      <section class="pagination">1,2,3,4,5,,,,</section>
+    </main>
+    <% include _sidebar %>
+  </div>
+  <% include _footer %>
+  <% include _script %>
 </body>
 </html>
