@@ -4,6 +4,8 @@
   text-align: center;
   top: 0;
   z-index: 10;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   .portrait-visual {
     width: 100%;
     min-width: 1980px;
@@ -74,7 +76,7 @@
           font-size: 16px;
           text-decoration: none;
           padding-bottom: 6px;
-          border-bottom: 2px solid $white;
+          @extend .a-green;
         }
       }
     }
@@ -86,7 +88,6 @@
     background-color: $white;
     position: fixed;
     z-index: 2;
-    border-bottom: 2px solid $black;
     .portrait-visual {
       display: none;
     }

@@ -8,6 +8,8 @@
 		font-weight: 300;
 		font-size: 26px;
 		letter-spacing: .6px;
+	  -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
 	}
 	.sidebar-item {
 		margin-bottom: 30px;
@@ -27,6 +29,8 @@
 				height: 62px;
 				overflow: hidden;
 				position: relative;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 				img {
 					height: 100%;
 					position: absolute;
@@ -41,6 +45,7 @@
 				line-height: 1.4em;
 				width: calc( 100% - ( 62px + 10px ) );
 				margin-left: 10px;
+				@extend .a-green;
 			}
 		}
 		&.instagram {
@@ -67,6 +72,8 @@
 			position: relative;
 			.banner {
 				width: 100%;
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
 				&:not(:first-child) {
 					margin-top: 20px; // todo: 現状、一個目もmarginついちゃう
 				}
@@ -80,3 +87,4 @@
 		}
 	}
 }
+

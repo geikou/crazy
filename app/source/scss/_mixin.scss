@@ -1,0 +1,7 @@
+.a-green {
+  color: inherit;
+  transition: color .2s;
+  &:hover {
+    color: $green;
+  }
+}
