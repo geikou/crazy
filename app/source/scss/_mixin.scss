@@ -5,3 +5,11 @@
     color: $green;
   }
 }
+
+.a-img {
+  overflow: hidden;
+  transition: all .2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

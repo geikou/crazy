@@ -74,8 +74,8 @@ body {
       position: relative;
       .post-category {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -5px;
+        left: -5px;
         background-color: rgba(0,0,0,0);
 
         &:after {
@@ -91,16 +91,13 @@ body {
       }
       .post-thumb {
         width: 100%;
+        display: block;
         position: relative;
         overflow: hidden;
         .post-thumb-img {
           float: right;
           width: 100%;
-          transition: all .2s;
-          &:hover {
-            transform: scale(1.05);
-            overflow: hidden;
-          }
+          @extend .a-img;
         }
       }
       .post-info {
