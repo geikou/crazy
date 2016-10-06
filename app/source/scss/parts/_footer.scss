@@ -1,11 +1,26 @@
 .footer {
   // todo: 仮スタイル
   width: 100%;
-  height: 380px;
+  height: 400px;
   color: $white;
-  text-align: center;
   background-color: #333;
+  font-weight: 400;
+  a {
+    color: #fff;
+  }
+  .footer-inner {
+    width: 1024px;
+    margin: 0 auto;
+    .footer-left, .footer-right {
+      float: left;
+      width: 50%;
+    }
+    .footer-right {
+      padding: 40px 0 0;
+    }
+  }
   .site-name {
+    padding: 40px 0;
     font-size: 26px;
     font-weight: bold;
     letter-spacing: 0.1em;
@@ -16,6 +31,54 @@
     }
   }
   .footer-ttl {
+    padding: 8px 0 10px 0;
     color: $green;
+    letter-spacing: 0.2em;
+  }
+  .footer-ul {
+    li {
+      display: inline-block;
+      padding: 0 16px;
+      &:nth-child(1) {
+        padding: 0 16px 0 0;
+      }
+    }
+    li+li {
+      border-left: 1px #fff solid;
+    }
+  }
+  .footer-category {
+    margin: 0 0 30px 0;
+  }
+  .footer-insta {
+    float: left;
+    ul {
+      width: 230px;
+      font-size: 0;
+      li {
+        display: inline-block;
+        width: 110px;
+        height: 110px;
+        margin: 0 0 10px 0;
+        &:nth-child(2n+1) {
+          margin: 0 10px 10px 0;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .facebook {
+    float: left;
+    width: 240px;
+    height: 230px;
+    margin: 32px 0 0 30px;
+    background: #fff;
+  }
+  .copy {
+    margin: 60px 0 0;
+    text-align: center;
   }
 }
