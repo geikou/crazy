@@ -71,7 +71,6 @@
         display: inline-block;
         vertical-align: top;
         margin: 0 20px;
-        @extend .a-text;
         a {
           color: $white;
           font-size: 16px;
@@ -116,6 +115,7 @@
             color: $black;
             font-size: 14px;
             border-bottom-color: $black;
+            @extend .a-text;
           }
         }
       }
