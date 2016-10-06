@@ -31,20 +31,21 @@ $(window).scroll(function() {
 var $jsPostTitle = $('.js-post-title');
 var $jsPostThumb = $('.js-post-thumb');
 
+
 $jsPostThumb.hover(
   function(e) {
-    $jsPostTitle.addClass('a-text-hover');
+    $(this).parents('.js-post-anchor').find('.js-post-title').addClass('a-text-hover');
   },
   function(e) {
-    $jsPostTitle.removeClass('a-text-hover');
+    $(this).parents('.js-post-anchor').find('.js-post-title').removeClass('a-text-hover');
   }
 );
 
 $jsPostTitle.hover(
   function(e) {
-    $jsPostThumb.addClass('a-img-hover');
+    $(this).parents('.js-post-anchor').find('.js-post-thumb').addClass('a-img-hover');
   },
   function(e) {
-    $jsPostThumb.removeClass('a-img-hover');
+    $(this).parents('.js-post-anchor').find('.js-post-thumb').removeClass('a-img-hover');
   }
 );
