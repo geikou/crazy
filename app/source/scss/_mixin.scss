@@ -1,8 +1,17 @@
+.a-text-hover {
+  color: $green;
+}
+
+.a-img-hover {
+  transform: scale(1.05);
+}
+
 .a-text {
   color: inherit;
-  transition: color .2s ease-in-out;
+  display: inline-block;
+  transition: all .3s ease-in-out;
   &:hover {
-    color: $green;
+    @extend .a-text-hover;
   }
 }
 
@@ -10,13 +19,12 @@
   overflow: hidden;
   transition: all .3s ease-in-out;
   &:hover {
-    transform: scale(1.05);
+    @extend .a-img-hover;
   }
 }
 
-
 .a-focus {
-  transition: border-color .2s;
+  transition: border-color .3s;
   &:hover {
     border-color: $green;
   }
