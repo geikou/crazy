@@ -37,10 +37,22 @@
 .a-button {
   transition: all .3s ease-in-out;
   &:hover {
-    color: $green;
-    border-color: $green;
+    color: $white;
+    background-color: $gray-light;
   }
 }
+
+.button {
+  display: block;
+  background-color: $white;
+  border-color: $gray-dark;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: $gray-dark;
+    color: $white !important;
+  }
+}
+
 
 // *-------メディアクエリ-------*
 

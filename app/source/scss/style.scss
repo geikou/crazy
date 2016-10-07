@@ -105,10 +105,10 @@ body {
 .wrapper {
   width: 1024px;
   margin: 50px auto;
+  padding-top: 360px;
   @include media(sp) {
     width: 100%;
   }
-  padding-top: 360px;
   .main {
     width: 720px;
     float: left;
@@ -289,18 +289,17 @@ body {
     font-size: 1rem;
     .post-date {
       float: left;
-      width: 80px;
-      height: 80px;
       font-size: 22px;
-      font-weight: 300;
-      line-height: 1.5em;
-      color: #555555;
+      line-height: 1.4em;
+      color: $gray-medium;
+      margin-right: 20px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       .post-date-month {
-        font-size: 22px;
+        font-size: 20px;
         display: inline-block;
         vertical-align: top;
+        font-weight: bold;
         &:after {
           content: '/';
           display: inline-block;
@@ -309,11 +308,13 @@ body {
         }
       }
       .post-date-day {
-        font-size: 34px;
+        font-size: 30px;
         display: block;
+        font-weight: bold;
       }
       .post-date-youbi {
-        font-size: 24px;
+        font-size: 18px;
+        text-align: center;
         letter-spacing: .6px;
         color: #bebebe;
         display: block;
@@ -323,11 +324,12 @@ body {
       float: left;
       width: 640px;
       height: auto;
-      color: white;
       .post-category {
         background-color: black;
+        color: white;
         padding: 7px;
         margin-bottom:5px;
+        @extend .a-text;
       }
       h1{
       font-size: 25px;
@@ -338,7 +340,7 @@ body {
     }
     hr{
       width:100%;
-      margin: 1.5em 0 4em;
+      margin: 1.5em 0 3em;
       border: 1px solid $gray-light;
     }
     h2{
@@ -384,7 +386,7 @@ body {
     }
     a{/*リンクされた文字*/
       color: $gray-medium;
-      font-style:normal;
+      font-weight: bold;
       text-decoration:none;
     }
     a:visited {/*訪問後のリンク*/
@@ -437,6 +439,90 @@ body {
       max-width: 720px;
       height: auto;
       margin-bottom: 2em;
+    }
+    strong {
+      background: linear-gradient(transparent 80%, $green 80%);
+      font-weight: bold;
+    }
+
+    .sns-share {
+      width: 720px;
+      margin: 7em auto;
+    }
+
+    .bottom-h2{
+      margin-bottom: 1em;
+      color: $gray-dark;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    } 
+    .about-writer {
+      width: 720px;
+      .post-writer-photo {
+        float: left;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+      }
+      .about-writer-right {
+        float: left;
+        width: 580px;
+        margin: 10px 0 40px 20px;
+        .post-writer-position {
+          display: block;
+          margin: 0 0 10px 0;
+          font-style: italic;
+          color: $gray-light;
+          letter-spacing: 0.1em;
+        }
+        .post-writer-name {
+          font-size: 22px;
+        }
+        .post-writer-name-en {
+          font-weight: bold;
+          font-size: 13px;
+          color: $gray-medium;
+          letter-spacing: 0.1em;
+          &:before {
+            display: inline-block;
+            content: "/";
+            padding: 0 10px 0 14px;
+          }
+        }
+        .post-writer-text {
+          margin: 20px 0;
+          line-height: 1.6em;
+        }
+      }
+    }
+
+    .related-posts {
+      width: 720px;
+      .article{
+        height: 120px;
+      }
+      .related-post-thumb {
+        float: left;
+        width: 120px;
+        height: 90px;
+      }
+      .related-post-info {
+        float: left;
+        width: 580px;
+        margin: 0 0 10px 20px;
+        .related-post-time{
+          margin-bottom: 3px;
+          font-size: 14px;
+          color: $gray-medium;
+          letter-spacing: 0.2em;
+        }
+        .related-post-title{
+          font-size: 16px;
+        }
+      }
     }
   }
 }
