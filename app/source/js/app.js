@@ -47,8 +47,45 @@ function lengthenHeader () {
       $header.css('top', '0');
     }
   });
-
 }
+
+/*
+  js-sp-header
+*** */
+var $spHeader = $('.js-sp-header-gnav');
+var $navTrigger = $('js-nav-trigger');
+
+var windowHeight = $(window).height();
+var spHeaderFrag = false; // アニメーションqueueをためないためのFrag
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > windowHeight/2) {
+    if(spHeaderFrag) { return; }
+    shortenSpHeader();
+  } else {
+    if(!spHeaderFrag) { return; }
+    lengthenSpHeader();
+  }
+});
+
+function shortenSpHeader () {
+  spHeaderFrag = true;
+  $spHeader.animate({
+    'top': '0'
+  }, {
+    duration: 300
+  });
+}
+
+function lengthenSpHeader () {
+  spHeaderFrag = false;
+  $spHeader.animate({
+    'top': '-60px'
+  }, {
+    duration: 200,
+  });
+}
+
 
 /*
   article-list の hover trigger
