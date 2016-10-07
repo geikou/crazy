@@ -33,8 +33,8 @@ body {
             pointer-events: none;
             &:after {
               position: absolute;
-              top: 45px;
-              left: 28px;
+              top: 60px;
+              left: 0px;
               background-color: rgba(0,0,0,0);
             }
           }
@@ -47,7 +47,7 @@ body {
           }
           .post-info {
             position: absolute;
-            top: 169px;
+            top: 159px;
             left: 0;
             box-sizing: border-box;
             width: 46%;
