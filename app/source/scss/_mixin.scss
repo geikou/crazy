@@ -33,3 +33,18 @@
     outline: 0;
   }
 }
+
+// *-------メディアクエリ-------*
+
+@mixin media($media-width) {
+  @if $media-width == sp {
+    @media only screen and (min-width: 320px) and (max-width: 599px){
+      @content;
+    }
+  }
+  @else if $media-width == pc {
+    @media only screen and (min-width: 600px){
+      @content;
+    }
+  }
+}
