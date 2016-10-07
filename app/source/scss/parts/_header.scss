@@ -61,6 +61,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  min-width: 1024px;
   z-index: 10;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -205,9 +206,9 @@
       }
       .menu {
         float: right;
-        margin: 26px 45px 0 0;
+        margin: 26px 40px 0 0;
         li {
-          margin: 0 20px;
+          margin: 0 12px;
           a {
             color: $black;
             font-size: 14px;
