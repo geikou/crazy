@@ -13,24 +13,48 @@ setInterval(function(){
 /*
   headerのスクロール制御
 *** */
-var $header = $('.header');
+var $header = $('.js-header');
+var lengthenFrag = false; // アニメーションqueueをためないためのFrag
+
 $(window).scroll(function() {
-  if ($(window).scrollTop() > 360) {
-    $header.addClass('fixed');
-    $('.wrapper').css( 'padding-top', 360 );
+  if ($(window).scrollTop() > 460) {
+    if($header.hasClass('fixed')) { return; }
+    shortenHeader();
   } else {
-    $header.removeClass('fixed');
-    $('.wrapper').css( 'padding-top', 0 );
+    if(!lengthenFrag) { return; }
+    lengthenHeader();
   }
 });
 
+function shortenHeader () {
+  $header.addClass('fixed');
+  lengthenFrag = true;
+  $header.animate({
+    'top': '0'
+  }, {
+    duration: 300
+  });
+}
+
+function lengthenHeader () {
+  lengthenFrag = false;
+  $header.animate({
+    'top': '-66px'
+  }, {
+    duration: 100,
+    complete: function() {
+      $header.removeClass('fixed');
+      $header.css('top', '0');
+    }
+  });
+
+}
 
 /*
   article-list の hover trigger
 *** */
 var $jsPostTitle = $('.js-post-title');
 var $jsPostThumb = $('.js-post-thumb');
-
 
 $jsPostThumb.hover(
   function(e) {
