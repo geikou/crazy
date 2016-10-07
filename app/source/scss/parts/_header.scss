@@ -34,6 +34,7 @@
       float: right;
       width: 200px;
       margin-top: 16px;
+      margin-right: 30px;
       font-size: 0;
       color: $white;
       position: relative;
@@ -74,15 +75,30 @@
     }
     .logo {
       margin: 155px 0 70px;
+      .site-name {
+        padding: 40px 0;
+        font-size: 32px;
+        line-height: 66px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        color: $white;
+        span {
+          display: inline-block;
+          padding: 0 12px;
+          font-weight: 400;
+        }
+      }
     }
     .menu {
       li {
         display: inline-block;
         vertical-align: top;
-        margin: 0 20px;
+        margin: 0 40px;
         a {
           color: $white;
-          font-size: 16px;
+          font-size: 15px;
+          letter-spacing: .15em;
+          font-weight: bold;
           text-decoration: none;
           padding-bottom: 6px;
           @extend .a-text;
@@ -124,13 +140,17 @@
         margin: 0;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 30px;
+        .site-name {
+          font-size: 26px;
+          color: $black;
+        }
       }
       .menu {
         float: right;
-        margin: 26px 10px 0 0;
+        margin: 26px 45px 0 0;
         li {
-          margin: 0 10px;
+          margin: 0 20px;
           a {
             color: $black;
             font-size: 14px;

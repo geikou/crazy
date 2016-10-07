@@ -13,10 +13,7 @@
 @import 'parts/footer';
 @import 'parts/writer';
 
-
 body {
-  font-family: 'Lato', YuGothic, '游ゴシック', sans-serif;
-  font-weight: bold;
   &.index {
     .posts .post {
       &:nth-child(even) {
