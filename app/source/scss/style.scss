@@ -105,10 +105,10 @@ body {
 .wrapper {
   width: 1024px;
   margin: 50px auto;
+  padding-top: 360px;
   @include media(sp) {
     width: 100%;
   }
-  padding-top: 360px;
   .main {
     width: 720px;
     float: left;

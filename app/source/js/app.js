@@ -13,9 +13,8 @@ setInterval(function(){
 /*
   headerのスクロール制御
 *** */
-var $header = $('.header');
-
-var lengthenFrag = false;
+var $header = $('.js-header');
+var lengthenFrag = false; // アニメーションqueueをためないためのFrag
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 460) {
