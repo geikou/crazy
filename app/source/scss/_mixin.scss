@@ -34,6 +34,14 @@
   }
 }
 
+.a-button {
+  transition: all .3s ease-in-out;
+  &:hover {
+    color: $green;
+    border-color: $green;
+  }
+}
+
 // *-------メディアクエリ-------*
 
 @mixin media($media-width) {
