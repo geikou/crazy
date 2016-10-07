@@ -9,7 +9,7 @@
   .about-writer-right {
     float: left;
     width: 450px;
-    margin: 26px 0 0 46px;
+    margin: 20px 0 0 46px;
     .post-writer-position {
       display: block;
       margin: 0 0 10px 0;
@@ -32,8 +32,19 @@
       }
     }
     .post-writer-text {
-      margin: 20px 0 0;
+      margin: 20px 0;
       line-height: 1.6em;
+    }
+    .post-writer-more {
+      width: 170px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid $gray-medium;
+      a {
+        color: #000;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+      }
     }
   }
 }
