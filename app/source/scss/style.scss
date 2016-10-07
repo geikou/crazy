@@ -17,6 +17,89 @@
 body {
   font-family: 'Lato', YuGothic, '游ゴシック', sans-serif;
   font-weight: bold;
+  &.index {
+    .posts .post {
+      &:nth-child(even) {
+        margin-right: 20px;
+        margin-left: 0;
+      }
+      &:first-child {
+        position: relative;
+        width: 720px;
+        .post-anchor {
+          width: 100%;
+          margin-left: 0;
+          padding-left: calc( 100% - 630px );
+          box-sizing: border-box;
+          .post-category {
+            position: absolute;
+            pointer-events: none;
+            &:after {
+              position: absolute;
+              top: 45px;
+              left: 28px;
+              background-color: rgba(0,0,0,0);
+            }
+          }
+          .post-thumb {
+            width: 630px;
+            height: 360px;
+            .post-thumb-img {
+              width: 100%;
+            }
+          }
+          .post-info {
+            position: absolute;
+            top: 169px;
+            left: 0;
+            box-sizing: border-box;
+            width: 46%;
+            height: 169px;
+            padding: 10px 20px;
+            background-color: rgba(0,0,0,.75);
+            color: $white;
+            .post-title {
+              font-size: 16px;
+              letter-spacing: .1em;
+              line-height: 1.6em;
+              text-align: justify;
+            }
+            .post-writer {
+              position: absolute;
+              line-height: 1.2em;
+              bottom: 20px;
+              .post-writer-photo {
+                display: inline-block;
+                vertical-align: middle;
+                width: 40px;
+                border-radius: 50%;
+              }
+              .post-writer-info {
+                margin-left: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                .post-writer-title {
+                  display: block;
+                  font-style: italic;
+                  font-size: 12px;
+                }
+                .post-writer-name {
+                  display: block;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        &.interview .post-category:after { content: url('../images/contents/category/interview.png'); }
+        &.report .post-category:after { content: url('../images/contents/category/report.png'); }
+        &.think .post-category:after { content: url('../images/contents/category/think.png'); }
+        &.daily .post-category:after { content: url('../images/contents/category/daily.png'); }
+        &.pr .post-category:after { content: url('../images/contents/category/pr.png'); }
+      }
+    }
+  }
 }
 
 .main {
@@ -42,7 +125,8 @@ body {
     font-size: 1rem;
     margin-bottom: 50px;
     &:nth-child(even) {
-      margin-right: 20px;
+      margin-right: 0;
+      margin-left: 20px;
     }
     .post-date {
       position: absolute;
@@ -143,84 +227,5 @@ body {
     &.daily .post-category:after { content: '日々'; }
     &.pr .post-category:after { content: '広報'; }
     &.think .post-category:after { content: '考える'; }
-
-    &:first-child {
-      position: relative;
-      width: 720px;
-      .post-anchor {
-        width: 100%;
-        margin-left: 0;
-        padding-left: calc( 100% - 630px );
-        box-sizing: border-box;
-        .post-category {
-          position: absolute;
-          pointer-events: none;
-          &:after {
-            position: absolute;
-            top: 45px;
-            left: 28px;
-            background-color: rgba(0,0,0,0);
-          }
-        }
-        .post-thumb {
-          width: 630px;
-          height: 360px;
-          .post-thumb-img {
-            width: 100%;
-          }
-        }
-        .post-info {
-          position: absolute;
-          top: 169px;
-          left: 0;
-          box-sizing: border-box;
-          width: 46%;
-          height: 169px;
-          padding: 10px 20px;
-          background-color: rgba(0,0,0,.75);
-          color: $white;
-          .post-title {
-            font-size: 16px;
-            letter-spacing: .1em;
-            line-height: 1.6em;
-            text-align: justify;
-          }
-          .post-writer {
-            position: absolute;
-            line-height: 1.2em;
-            bottom: 20px;
-            .post-writer-photo {
-              display: inline-block;
-              vertical-align: middle;
-              width: 40px;
-              border-radius: 50%;
-            }
-            .post-writer-info {
-              margin-left: 10px;
-              display: inline-block;
-              vertical-align: middle;
-              text-align: left;
-              .post-writer-title {
-                display: block;
-                font-style: italic;
-                font-size: 12px;
-              }
-              .post-writer-name {
-                display: block;
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-
-      &.interview .post-category:after { content: url('../images/contents/category/interview.png'); }
-      &.report .post-category:after { content: url('../images/contents/category/report.png'); }
-      &.think .post-category:after { content: url('../images/contents/category/think.png'); }
-      &.daily .post-category:after { content: url('../images/contents/category/daily.png'); }
-      &.pr .post-category:after { content: url('../images/contents/category/pr.png'); }
-    }
   }
 }
-
-
