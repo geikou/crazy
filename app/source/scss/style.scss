@@ -20,6 +20,9 @@ body {
       &:nth-child(even) {
         margin-right: 20px;
         margin-left: 0;
+        @include media(sp) {
+          margin-right: 0;
+        }
       }
       @include media(pc) {
         &:first-child {
