@@ -27,7 +27,7 @@ $(window).scroll(function() {
 });
 
 function shortenHeader () {
-  $header.addClass('fixed');
+  $header.addClass('fixed').css('top', '-66px');
   lengthenFrag = true;
   $header.animate({
     'top': '0'
@@ -43,8 +43,7 @@ function lengthenHeader () {
   }, {
     duration: 100,
     complete: function() {
-      $header.removeClass('fixed');
-      $header.css('top', '0');
+      $header.removeClass('fixed').css('top', '0');
     }
   });
 }
