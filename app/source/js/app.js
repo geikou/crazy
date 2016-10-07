@@ -52,9 +52,41 @@ function lengthenHeader () {
 /*
   js-sp-header
 *** */
-var $spHeader = $('.js-sp-header-gnav');
-var $navTrigger = $('js-nav-trigger');
+var $navTrigger = $('.js-nav-trigger');
+var $slideMenu = $('.js-slide-menu');
+var slideMenuFrag = true;
 
+$navTrigger.on('click', function() {
+
+  if(!slideMenuFrag){ return; }
+  slideMenuFrag = false; // アニメーションqueueをためない
+
+  if($(this).hasClass('.slide-menu-is-open')) {
+    $navTrigger.removeClass('.slide-menu-is-open');
+    $slideMenu.animate({
+      'opacity': '1',
+      'left': '0'
+    }, {
+      duration: 200,
+      complete: function() {
+        slideMenuFrag = true;
+      }
+    });
+  } else {
+    $navTrigger.addClass('.slide-menu-is-open');
+    $slideMenu.animate({
+      'opacity': '0',
+      'left': '100vw'
+    }, {
+      duration: 200,
+      complete: function() {
+        slideMenuFrag = true;
+      }
+    });
+  }
+});
+
+var $spHeader = $('.js-sp-header-gnav');
 var windowHeight = $(window).height();
 var spHeaderFrag = false; // アニメーションqueueをためないためのFrag
 
@@ -110,3 +142,4 @@ $jsPostTitle.hover(
     $(this).parents('.js-post-anchor').find('.js-post-thumb').removeClass('a-img-hover');
   }
 );
+
