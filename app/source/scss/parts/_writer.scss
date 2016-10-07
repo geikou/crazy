@@ -1,7 +1,9 @@
 .about-writer {
   font-weight: 400;
-  @include media(sp) {
-    text-align: center;
+  &.about-writer-center {
+    @include media(sp) {
+      text-align: center;
+    }
   }
   .post-writer-photo {
     float: left;
