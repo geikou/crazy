@@ -12,6 +12,7 @@
 @import 'parts/sidebar';
 @import 'parts/footer';
 @import 'parts/writer';
+@import 'parts/button';
 
 body {
   &.index {
@@ -108,6 +109,8 @@ body {
   padding-top: 360px;
   @include media(sp) {
     width: 100%;
+    margin: 30px auto;
+    padding-top: 0;
   }
   .main {
     width: 720px;
@@ -128,6 +131,9 @@ body {
   font-weight: 400;
   .hr-title-inner {
     padding: 0 80px;
+    @include media(sp) {
+      padding: 0 20px;
+    }
     background: #fff;
   }
   .hr-title-bold {
@@ -181,6 +187,9 @@ body {
     &:nth-child(even) {
       margin-right: 0;
       margin-left: 20px;
+      @include media(sp) {
+        margin-left: 0;
+      }
     }
     .post-date {
       position: absolute;
@@ -346,11 +355,11 @@ body {
         margin-bottom:5px;
         @extend .a-text;
       }
-      h1{
-      font-size: 25px;
-      font-weight: bold;
-      line-height: 1.7em;
-      padding: 5px 10px 10px 0;
+      h1 {
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 1.7em;
+        padding: 5px 10px 10px 0;
       }
     }
     hr{
@@ -399,18 +408,23 @@ body {
       line-height: 1.8em;
       margin-bottom: 1.8em;
     }
-    a{/*リンクされた文字*/
+    a {
+      display: inline-block;
       color: $gray-medium;
       font-weight: bold;
-      text-decoration:none;
+      text-decoration: none;
+      &:not(img) {
+        margin-bottom: 1.2em;
+      }
+      &:visited {
+        text-decoration: underline;
+      }
+      &:hover {
+        color: $green;
+      }
     }
-    a:visited {/*訪問後のリンク*/
-      text-decoration:underline;
-    }
-    a:hover {/*マウスをのせたとき*/
-      color:$green;
-    }
-    ul, ol {
+    ul,
+    ol {
         padding: 1.5em 4em;
         line-height: 3em;
         list-style-position: inside;
@@ -423,11 +437,7 @@ body {
     ol {
         list-style: decimal;
     }
-    li{
-      padding: 0;
-      margin: 0;
-    }
-    table{
+    table {
       margin: 2em 0 2em 2px;
     }
     table, th, td {
@@ -437,23 +447,24 @@ body {
       border-width: 0 1px 1px 0;
 
     }
-    th, td {
+    th,
+    td {
       padding: 1.5em;
     }
-    blockquote{
-        color: $gray-medium;
-        font-size: 15px;
-        font-style: italic;
-        background-color:#f6f6f6;
-        padding: 2em;
-        line-height: 1.9em;
-        margin: 2em 0 2em 2px;
-        border: 1px solid $gray-light;
+    blockquote {
+      color: $gray-medium;
+      font-size: 15px;
+      font-style: italic;
+      background-color:#f6f6f6;
+      padding: 2em;
+      line-height: 1.9em;
+      margin: 2em 0 2em 2px;
+      border: 1px solid $gray-light;
     }
-    img{
+    img {
       max-width: 720px;
-      height: auto;
-      margin-bottom: 2em;
+      display: block;
+      margin: 0 auto 2em;
     }
     strong {
       background: linear-gradient(transparent 80%, $green 80%);
@@ -463,6 +474,14 @@ body {
     .sns-share {
       width: 720px;
       margin: 7em auto;
+      text-align: center;
+      .button {
+        margin: 0 60px;
+        line-height: 40px;
+        .icon {
+          margin-right: 12px;
+        }
+      }
     }
 
     .bottom-h2{
@@ -473,7 +492,7 @@ body {
       letter-spacing: 1.6px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-    } 
+    }
     .about-writer {
       width: 720px;
       .post-writer-photo {
