@@ -109,6 +109,8 @@ body {
   padding-top: 360px;
   @include media(sp) {
     width: 100%;
+    margin: 30px auto;
+    padding-top: 0;
   }
   .main {
     width: 720px;
@@ -129,6 +131,9 @@ body {
   font-weight: 400;
   .hr-title-inner {
     padding: 0 80px;
+    @include media(sp) {
+      padding: 0 20px;
+    }
     background: #fff;
   }
   .hr-title-bold {
@@ -167,6 +172,9 @@ body {
     &:nth-child(even) {
       margin-right: 0;
       margin-left: 20px;
+      @include media(sp) {
+        margin-left: 0;
+      }
     }
     .post-date {
       position: absolute;
