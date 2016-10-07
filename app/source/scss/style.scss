@@ -267,20 +267,20 @@ body {
       margin-bottom: 1.8em;
     }
     p{
-      font-size:16px;
+      font-size: 16px;
       line-height: 1.8em;
       margin-bottom: 1.8em;
     }
     a{/*リンクされた文字*/
-    color: $gray-medium;
-    font-style:normal;
-    text-decoration:none;
+      color: $gray-medium;
+      font-style:normal;
+      text-decoration:none;
     }
     a:visited {/*訪問後のリンク*/
-        text-decoration:underline;
+      text-decoration:underline;
     }
     a:hover {/*マウスをのせたとき*/
-        color:$green;
+      color:$green;
     }
     ul, ol {
         padding: 2em;
