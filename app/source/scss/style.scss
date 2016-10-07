@@ -13,10 +13,7 @@
 @import 'parts/footer';
 @import 'parts/writer';
 
-
 body {
-  font-family: 'Lato', YuGothic, '游ゴシック', sans-serif;
-  font-weight: bold;
   &.index {
     .posts .post {
       &:nth-child(even) {
@@ -58,15 +55,16 @@ body {
             padding: 10px 20px;
             background-color: rgba(0,0,0,.75);
             color: $white;
+            letter-spacing: 0.08em;
             .post-title {
               font-size: 16px;
-              letter-spacing: .1em;
               line-height: 1.6em;
+              font-weight: bold;
               text-align: justify;
             }
             .post-writer {
               position: absolute;
-              line-height: 1.2em;
+              line-height: 1.1em;
               bottom: 20px;
               .post-writer-photo {
                 display: inline-block;
@@ -82,7 +80,7 @@ body {
                 .post-writer-title {
                   display: block;
                   font-style: italic;
-                  font-size: 12px;
+                  font-size: 13px;
                 }
                 .post-writer-name {
                   display: block;
@@ -130,15 +128,15 @@ body {
     }
     .post-date {
       position: absolute;
-      font-weight: 300;
-      line-height: 1.5em;
-      color: #555555;
+      line-height: 1.4em;
+      color: $gray-medium;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       .post-date-month {
-        font-size: 22px;
+        font-size: 15px;
         display: inline-block;
         vertical-align: top;
+        font-weight: bold;
         &:after {
           content: '/';
           display: inline-block;
@@ -147,11 +145,13 @@ body {
         }
       }
       .post-date-day {
-        font-size: 34px;
+        font-size: 24px;
         display: block;
+        font-weight: bold;
       }
       .post-date-youbi {
-        font-size: 24px;
+        font-size: 15px;
+        text-align: center;
         letter-spacing: .6px;
         color: #bebebe;
         display: block;
@@ -170,8 +170,10 @@ body {
         &:after {
           position: relative;
           display: inline-block;
-          color: $white;
           padding: 6px 12px;
+          color: $white;
+          font-size: 14px;
+          font-weight: bold;
           background-color: rgba(0,0,0,.7);
           z-index: 1;
           -webkit-backface-visibility: hidden;
@@ -191,32 +193,34 @@ body {
         }
       }
       .post-info {
+        letter-spacing: .08em;
         .post-title {
-          margin-top: 10px;
-          letter-spacing: .1em;
+          margin: 12px 0 10px 0;
           line-height: 1.4em;
+          font-weight: bold;
+          font-size: 15px;
           text-decoration: none;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
         }
         .post-writer {
+          text-align: right;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           .post-writer-photo {
             display: none;
           }
           .post-writer-info {
-            text-align: right;
             .post-writer-title {
-              color: gray;
               margin-right: 10px;
               display: inline-block;
               font-size: 13px;
+              color: $gray-light;
+              font-style: italic;
             }
             .post-writer-name {
               display: inline-block;
               font-size: 14px;
-
             }
           }
         }
@@ -323,20 +327,20 @@ body {
       margin-bottom: 1.8em;
     }
     p{
-      font-size:16px;
+      font-size: 16px;
       line-height: 1.8em;
       margin-bottom: 1.8em;
     }
     a{/*リンクされた文字*/
-    color: $gray-medium;
-    font-style:normal;
-    text-decoration:none;
+      color: $gray-medium;
+      font-style:normal;
+      text-decoration:none;
     }
     a:visited {/*訪問後のリンク*/
-        text-decoration:underline;
+      text-decoration:underline;
     }
     a:hover {/*マウスをのせたとき*/
-        color:$green;
+      color:$green;
     }
     ul, ol {
         padding: 1.5em 4em;
