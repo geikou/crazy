@@ -215,6 +215,92 @@ body {
       &.pr .post-category:after { content: url('../images/contents/category/pr.png'); }
     }
   }
+  .single-post {
+    font-size: 1rem;
+    h1{
+      font-size: 25px;
+      line-height: 1.7em;
+      background: $glay-light;
+      padding: 25px;
+      margin-bottom: 1.8em;
+    }
+    h2{
+      font-size: 22px;
+      line-height: 1.7em;
+      border-left:7px solid $glay-light;
+      padding: 20px;
+      margin-bottom: 1.8em;
+    }
+    h3{
+      font-size: 20px;
+      line-height: 1.7em;
+      border-bottom:1px solid $glay-light;
+      padding: 15px;
+      margin-bottom: 1.8em;
+    }
+    h4{
+      font-size: 20px;
+      line-height: 1.7em;
+      margin-bottom: 1.8em;
+    }
+    h5{
+      font-size: 18px;
+      line-height: 1.7em;
+      margin-bottom: 1.8em;
+    }
+    h6{
+      font-size: 16px;
+      line-height: 1.7em;
+      margin-bottom: 1.8em;
+    }
+    p{
+      font-size:16px;
+      line-height: 1.8em;
+      margin-bottom: 1.8em;
+    }
+    a{/*リンクされた文字*/
+    color:$glat-medium;
+    font-style:normal;
+    text-decoration:none;
+    }
+    a:visited {/*訪問後のリンク*/
+        text-decoration:underline;
+    }
+    a:hover {/*マウスをのせたとき*/
+        color:$green;
+    }
+    ul, ol {
+        padding: 2em;
+        line-height: 3em;
+        list-style-position: inside;
+        margin: 2em 0 4px 2em;
+        border: 1px solid $glay-light;
+    }
+    ul {
+        list-style: circle;
+    }
+    ol {
+        list-style: decimal;
+    }
+    li{
+      padding: 0;
+      margin: 0;
+    }
+    table{
+      margin: 2em 0 4px 2em;
+    }
+    table, th, td {
+      border: 1px solid $glay-light;
+    }
+    th {
+      border-width: 0 1px 1px 0;
+
+    }
+    th, td {
+      padding: 1.5em;
+    }
+
+  }
 }
 
 
