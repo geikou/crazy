@@ -108,6 +108,7 @@ body {
   @include media(sp) {
     width: 100%;
   }
+  padding-top: 360px;
   .main {
     width: 720px;
     float: left;
