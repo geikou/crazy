@@ -163,6 +163,9 @@ body {
   }
   &.archive-title {
     padding: 0 0 66px 0;
+    @include media(sp) {
+      padding: 0 0 36px 0;
+    }
     &:before {
       top: 8%;
     }
