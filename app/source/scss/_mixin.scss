@@ -24,7 +24,7 @@
 }
 
 .a-focus {
-  transition: border-color .3s;
+  transition: border-color .3s ease-in-out;
   &:hover {
     border-color: $green;
   }
