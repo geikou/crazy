@@ -299,27 +299,25 @@ body {
     }
     .post-right{
       float: left;
-      width: 520px;
+      width: 640px;
       height: auto;
+      color: white;
       .post-category {
-        position: absolute;
-        background-color: rgba(0,0,0,0);
-        &:after {
-          position: relative;
-          display: inline-block;
-          color: $white;
-          padding: 6px 12px;
-          background-color: rgba(0,0,0,.7);
-          z-index: 1;
-        }
+        background-color: black;
+        padding: 7px;
+        margin-bottom:5px;
       }
-    }
-    h1{
+      h1{
       font-size: 25px;
       font-weight: bold;
       line-height: 1.7em;
-      padding: 25px;
-      margin-bottom: 1.8em;
+      padding: 5px 10px 10px 0;
+      }
+    }
+    hr{
+      width:100%;
+      margin: 1.5em 0 4em;
+      border: 1px solid $gray-light;
     }
     h2{
       font-size: 25px;
@@ -412,6 +410,11 @@ body {
         line-height: 1.9em;
         margin: 2em 0 2em 2px;
         border: 1px solid $gray-light;
+    }
+    img{
+      max-width: 720px;
+      height: auto;
+      margin-bottom: 2em;
     }
   }
 }
