@@ -42,18 +42,6 @@
   }
 }
 
-.button {
-  display: block;
-  background-color: $white;
-  border-color: $gray-dark;
-  transition: all .3s ease-in-out;
-  &:hover {
-    background-color: $gray-dark;
-    color: $white !important;
-  }
-}
-
-
 // *-------メディアクエリ-------*
 
 @mixin media($media-width) {
