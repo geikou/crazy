@@ -32,8 +32,11 @@
     width: 100%;
     .search {
       float: right;
-      margin: 16px 20px 0 0;
+      width: 200px;
+      margin-top: 16px;
       font-size: 0;
+      color: $white;
+      position: relative;
       .search-button {
         display: inline-block;
         vertical-align: top;
@@ -45,20 +48,28 @@
         line-height: 36px;
         text-align: center;
         color: $white;
+        opacity: 0;
       }
       .search-form {
         display: inline-block;
         vertical-align: top;
         font-size: 14px;
         height: 36px;
-        width: 180px;
+        width: 100%;
         box-sizing: border-box;
         padding: 10px 35px 10px 15px;
         border-radius: 25px;
-        border: 2px solid $white;
+        border: 1px solid $white;
         background-color: rgba(255,255,255,.3);
         color: $white;
         @extend .a-focus;
+      }
+      .search-button-label {
+        color: inherit;
+        font-size: 18px;
+        line-height: 36px;
+        position: absolute;
+        right: 12px;
       }
     }
     .logo {
@@ -85,17 +96,28 @@
     height: 66px;
     background-color: $white;
     position: fixed;
+    top: 0;
     z-index: 2;
     .video {
       display: none;
     }
     .gnav {
       .search {
+        color: $black;
         .search-button {
           color: $black;
         }
         .search-form {
-          border: 2px solid $black;
+          border: 1px solid $black;
+          color: $black;
+          transition: border-color .3s;
+          &:hover {
+            border-color: $green;
+          }
+          &:focus {
+            border-color: $green;
+            outline: 0;
+          }
         }
       }
       .logo {
@@ -113,7 +135,12 @@
             color: $black;
             font-size: 14px;
             border-bottom-color: $black;
-            @extend .a-text;
+            color: inherit;
+            display: inline-block;
+            transition: all .3s ease-in-out;
+            &:hover {
+              color: $green;
+            }
           }
         }
       }

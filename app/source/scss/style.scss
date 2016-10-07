@@ -1,11 +1,17 @@
+#__bs_notify__ {
+  display: none !important; // gulp通知削除
+}
+
 @import 'setting';
 @import 'reset';
 @import 'mixin';
 @import 'base';
 @import 'clearfix';
+@import 'iconfont';
 @import 'parts/header';
 @import 'parts/sidebar';
 @import 'parts/footer';
+@import 'parts/writer';
 
 
 body {

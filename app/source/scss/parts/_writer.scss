@@ -1,0 +1,64 @@
+.about-writer {
+  font-weight: 400;
+  .post-writer-photo {
+    float: left;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+  }
+  .about-writer-right {
+    float: left;
+    width: 450px;
+    margin: 26px 0 0 46px;
+    .post-writer-position {
+      display: block;
+      margin: 0 0 10px 0;
+      font-style: italic;
+      color: $gray-light;
+      letter-spacing: 0.1em;
+    }
+    .post-writer-name {
+      font-size: 22px;
+    }
+    .post-writer-name-en {
+      font-weight: bold;
+      font-size: 13px;
+      color: $gray-medium;
+      letter-spacing: 0.1em;
+      &:before {
+        display: inline-block;
+        content: "/";
+        padding: 0 10px 0 14px;
+      }
+    }
+    .post-writer-text {
+      margin: 20px 0 0;
+      line-height: 1.6em;
+    }
+  }
+}
+
+.post-list-ttl {
+  position: relative;
+  padding: 66px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  .post-list-ttl-inner {
+    padding: 0 80px;
+    background: #fff;
+  }
+  .post-writer-name {
+    font-weight: bold;
+    padding: 0 8px 0 0;
+  }
+  &:before {
+    content:"";
+    display: block;
+    position: absolute;
+    z-index:-1;
+    top: 50%;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6  ;
+  }
+}
