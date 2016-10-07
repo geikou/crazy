@@ -1,12 +1,11 @@
 /*
   Instagram フィードを流す
 *** */
+var $instaSlider = $('.js-insta-slider');
 var instaMargin = 0;
 setInterval(function(){
   instaMargin--;
-  $('.js-slider').css({
-    'margin-top': instaMargin
-  });
+  $instaSlider.css( 'margin-top': instaMargin );
 }, 40);
 
 
@@ -41,7 +40,7 @@ function lengthenHeader () {
   $header.animate({
     'top': '-66px'
   }, {
-    duration: 100,
+    duration: 200,
     complete: function() {
       $header.removeClass('fixed').css('top', '0');
     }
@@ -141,4 +140,3 @@ $jsPostTitle.hover(
     $(this).parents('.js-post-anchor').find('.js-post-thumb').removeClass('a-img-hover');
   }
 );
-
