@@ -41,35 +41,11 @@
       text-align: center;
       border: 1px solid $gray-medium;
       a {
+        display: block;
         color: #000;
         font-weight: bold;
         letter-spacing: 0.1em;
       }
     }
-  }
-}
-
-.post-list-ttl {
-  position: relative;
-  padding: 66px 0;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  .post-list-ttl-inner {
-    padding: 0 80px;
-    background: #fff;
-  }
-  .post-writer-name {
-    font-weight: bold;
-    padding: 0 8px 0 0;
-  }
-  &:before {
-    content:"";
-    display: block;
-    position: absolute;
-    z-index:-1;
-    top: 50%;
-    width: 100%;
-    border-bottom: 1px solid #e6e6e6  ;
   }
 }

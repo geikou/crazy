@@ -114,6 +114,37 @@ body {
   }
 }
 
+.hr-title {
+  position: relative;
+  padding: 66px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  .hr-title-inner {
+    padding: 0 80px;
+    background: #fff;
+  }
+  .hr-title-bold {
+    font-weight: bold;
+    padding: 0 8px 0 0;
+  }
+  &:before {
+    content:"";
+    display: block;
+    position: absolute;
+    z-index:-1;
+    top: 50%;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &.archive-title {
+    padding: 0 0 66px 0;
+    &:before {
+      top: 8%;
+    }
+  }
+}
+
 .posts {
   font-size: 0;
   .post {
@@ -376,11 +407,16 @@ body {
         color: $gray-medium;
         font-size: 15px;
         font-style: italic;
-        background-color:#f6f6f6; 
+        background-color:#f6f6f6;
         padding: 2em;
         line-height: 1.9em;
         margin: 2em 0 2em 2px;
         border: 1px solid $gray-light;
     }
   }
+}
+
+
+.no-article {
+  display: none;
 }
