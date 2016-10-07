@@ -4,14 +4,7 @@
   <% include _head %>
 </head>
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  <% include _fb-likebox %>
   <% include _header %>
   <div class="wrapper clearfix">
     <main class="main">
@@ -19,159 +12,19 @@
       <p class="no-article">該当する記事がありません。</p>
       <section class="posts">
 
-        <article class="post interview clearfix">
-          <div class="post-date">
-            <span class="post-date-month">10</span>
-            <span class="post-date-day">23</span>
-            <span class="post-date-youbi">Fri</span>
-          </div>
-          <div class="post-anchor clearfix js-post-anchor">
-            <a class="a-text post-category" href="category.html"></a>
-            <div class="post-thumb clearfix">
-              <a href="article.html"><img class="js-post-thumb post-thumb-img" src="./images/contents/thumb/thumb.png"></a>
-            </div>
-            <div class="post-info">
-              <a class="a-text" href="article.html"><h3 class="post-title js-post-title">成功が約束された90点の未来か、失敗するかもしれない100点を超える未来か</h3></a>
-              <div class="post-writer">
-                <a class="a-text" href="writer.html">
-                  <img class="post-writer-photo" src="./images/contents/writer/profile.png">
-                  <div class="post-writer-info">
-                    <p class="post-writer-title">WRITER</p>
-                    <p class="post-writer-name">渡辺さゆり</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="post interview clearfix">
-          <div class="post-date">
-            <span class="post-date-month">10</span>
-            <span class="post-date-day">23</span>
-            <span class="post-date-youbi">Fri</span>
-          </div>
-          <div class="post-anchor clearfix js-post-anchor">
-            <a class="a-text post-category" href="category.html"></a>
-            <div class="post-thumb clearfix">
-              <a href="article.html"><img class="js-post-thumb post-thumb-img" src="./images/contents/thumb/thumb.png"></a>
-            </div>
-            <div class="post-info">
-              <a class="a-text" href="article.html"><h3 class="post-title js-post-title">成功が約束された90点の未来か、失敗するかもしれない100点を超える未来か</h3></a>
-              <div class="post-writer">
-                <a class="a-text" href="writer.html">
-                  <img class="post-writer-photo" src="./images/contents/writer/profile.png">
-                  <div class="post-writer-info">
-                    <p class="post-writer-title">WRITER</p>
-                    <p class="post-writer-name">渡辺さゆり</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="post interview clearfix">
-          <div class="post-date">
-            <span class="post-date-month">10</span>
-            <span class="post-date-day">23</span>
-            <span class="post-date-youbi">Fri</span>
-          </div>
-          <div class="post-anchor clearfix js-post-anchor">
-            <a class="a-text post-category" href="category.html"></a>
-            <div class="post-thumb clearfix">
-              <a href="article.html"><img class="js-post-thumb post-thumb-img" src="./images/contents/thumb/thumb.png"></a>
-            </div>
-            <div class="post-info">
-              <a class="a-text" href="article.html"><h3 class="post-title js-post-title">成功が約束された90点の未来か、失敗するかもしれない100点を超える未来か</h3></a>
-              <div class="post-writer">
-                <a class="a-text" href="writer.html">
-                  <img class="post-writer-photo" src="./images/contents/writer/profile.png">
-                  <div class="post-writer-info">
-                    <p class="post-writer-title">WRITER</p>
-                    <p class="post-writer-name">渡辺さゆり</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="post interview clearfix">
-          <div class="post-date">
-            <span class="post-date-month">10</span>
-            <span class="post-date-day">23</span>
-            <span class="post-date-youbi">Fri</span>
-          </div>
-          <div class="post-anchor clearfix js-post-anchor">
-            <a class="a-text post-category" href="category.html"></a>
-            <div class="post-thumb clearfix">
-              <a href="article.html"><img class="js-post-thumb post-thumb-img" src="./images/contents/thumb/thumb.png"></a>
-            </div>
-            <div class="post-info">
-              <a class="a-text" href="article.html"><h3 class="post-title js-post-title">成功が約束された90点の未来か、失敗するかもしれない100点を超える未来か</h3></a>
-              <div class="post-writer">
-                <a class="a-text" href="writer.html">
-                  <img class="post-writer-photo" src="./images/contents/writer/profile.png">
-                  <div class="post-writer-info">
-                    <p class="post-writer-title">WRITER</p>
-                    <p class="post-writer-name">渡辺さゆり</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="post interview clearfix">
-          <div class="post-date">
-            <span class="post-date-month">10</span>
-            <span class="post-date-day">23</span>
-            <span class="post-date-youbi">Fri</span>
-          </div>
-          <div class="post-anchor clearfix js-post-anchor">
-            <a class="a-text post-category" href="category.html"></a>
-            <div class="post-thumb clearfix">
-              <a href="article.html"><img class="js-post-thumb post-thumb-img" src="./images/contents/thumb/thumb.png"></a>
-            </div>
-            <div class="post-info">
-              <a class="a-text" href="article.html"><h3 class="post-title js-post-title">成功が約束された90点の未来か、失敗するかもしれない100点を超える未来か</h3></a>
-              <div class="post-writer">
-                <a class="a-text" href="writer.html">
-                  <img class="post-writer-photo" src="./images/contents/writer/profile.png">
-                  <div class="post-writer-info">
-                    <p class="post-writer-title">WRITER</p>
-                    <p class="post-writer-name">渡辺さゆり</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="post interview clearfix">
-          <div class="post-date">
-            <span class="post-date-month">10</span>
-            <span class="post-date-day">23</span>
-            <span class="post-date-youbi">Fri</span>
-          </div>
-          <div class="post-anchor clearfix js-post-anchor">
-            <a class="a-text post-category" href="category.html"></a>
-            <div class="post-thumb clearfix">
-              <a href="article.html"><img class="js-post-thumb post-thumb-img" src="./images/contents/thumb/thumb.png"></a>
-            </div>
-            <div class="post-info">
-              <a class="a-text" href="article.html"><h3 class="post-title js-post-title">成功が約束された90点の未来か、失敗するかもしれない100点を超える未来か</h3></a>
-              <div class="post-writer">
-                <a class="a-text" href="writer.html">
-                  <img class="post-writer-photo" src="./images/contents/writer/profile.png">
-                  <div class="post-writer-info">
-                    <p class="post-writer-title">WRITER</p>
-                    <p class="post-writer-name">渡辺さゆり</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
+        <% include _post %>
 
       </section>
-      <section class="pagination">1,2,3,4,5,,,,</section>
+      <% include _pagination %>
     </main>
     <% include _sidebar %>
   </div>
