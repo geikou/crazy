@@ -143,10 +143,25 @@ body {
     width: 100%;
     border-bottom: 1px solid #e6e6e6;
   }
+  &:before {
+    content:"";
+    display: block;
+    position: absolute;
+    z-index:-1;
+    top: 50%;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+  }
   &.archive-title {
     padding: 0 0 66px 0;
     &:before {
       top: 8%;
+    }
+  }
+  &.category-title {
+    padding: 0px 0 66px 0;
+    &:before {
+      top: 30%;
     }
   }
 }
