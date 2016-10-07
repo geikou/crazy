@@ -1,5 +1,4 @@
 .footer {
-  // todo: 仮スタイル
   width: 100%;
   height: 400px;
   color: $white;
@@ -7,6 +6,10 @@
   font-weight: 400;
   a {
     color: #fff;
+    &:hover {
+      opacity: 0.6;
+      transition: all .3s ease-in-out;
+    }
   }
   .footer-inner {
     width: 1024px;
@@ -74,11 +77,12 @@
     float: left;
     width: 240px;
     height: 230px;
-    margin: 32px 0 0 30px;
-    background: #fff;
+    margin: 32px 0 0 34px;
   }
   .copy {
     margin: 60px 0 0;
     text-align: center;
+    color: #9b9b9b;
+    font-size: 12px;
   }
 }
