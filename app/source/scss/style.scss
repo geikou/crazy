@@ -234,39 +234,95 @@ body {
   }
   .single-post {
     font-size: 1rem;
+    .post-date {
+      float: left;
+      width: 80px;
+      height: 80px;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.5em;
+      color: #555555;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      .post-date-month {
+        font-size: 22px;
+        display: inline-block;
+        vertical-align: top;
+        &:after {
+          content: '/';
+          display: inline-block;
+          vertical-align: top;
+          margin-left: 2px;
+        }
+      }
+      .post-date-day {
+        font-size: 34px;
+        display: block;
+      }
+      .post-date-youbi {
+        font-size: 24px;
+        letter-spacing: .6px;
+        color: #bebebe;
+        display: block;
+      }
+    }
+    .post-right{
+      float: left;
+      width: 520px;
+      height: auto;
+      .post-category {
+        position: absolute;
+        background-color: rgba(0,0,0,0);
+        &:after {
+          position: relative;
+          display: inline-block;
+          color: $white;
+          padding: 6px 12px;
+          background-color: rgba(0,0,0,.7);
+          z-index: 1;
+        }
+      }
+    }
     h1{
       font-size: 25px;
+      font-weight: bold;
+      line-height: 1.7em;
+      padding: 25px;
+      margin-bottom: 1.8em;
+    }
+    h2{
+      font-size: 25px;
+      font-weight: bold;
       line-height: 1.7em;
       background: $gray-light;
       padding: 25px;
       margin-bottom: 1.8em;
     }
-    h2{
+    h3{
       font-size: 22px;
+      font-weight: bold;
       line-height: 1.7em;
       border-left:7px solid $gray-light;
       padding: 20px;
       margin-bottom: 1.8em;
     }
-    h3{
-      font-size: 20px;
+    h4{
+      font-size: 22px;
+      font-weight: bold;
       line-height: 1.7em;
       border-bottom:1px solid $gray-light;
       padding: 15px;
       margin-bottom: 1.8em;
     }
-    h4{
-      font-size: 20px;
-      line-height: 1.7em;
-      margin-bottom: 1.8em;
-    }
     h5{
-      font-size: 18px;
+      font-size: 22px;
+      font-weight: bold;
       line-height: 1.7em;
       margin-bottom: 1.8em;
     }
     h6{
-      font-size: 16px;
+      font-size: 20px;
+      font-weight: bold;
       line-height: 1.7em;
       margin-bottom: 1.8em;
     }
@@ -287,10 +343,10 @@ body {
       color:$green;
     }
     ul, ol {
-        padding: 2em;
+        padding: 1.5em 4em;
         line-height: 3em;
         list-style-position: inside;
-        margin: 2em 0 4px 2em;
+        margin: 2em 0 2em 2px;
         border: 1px solid $gray-light;
     }
     ul {
@@ -304,7 +360,7 @@ body {
       margin: 0;
     }
     table{
-      margin: 2em 0 4px 2em;
+      margin: 2em 0 2em 2px;
     }
     table, th, td {
       border: 1px solid $gray-light;
@@ -316,6 +372,15 @@ body {
     th, td {
       padding: 1.5em;
     }
-
+    blockquote{
+        color: $gray-medium;
+        font-size: 15px;
+        font-style: italic;
+        background-color:#f6f6f6; 
+        padding: 2em;
+        line-height: 1.9em;
+        margin: 2em 0 2em 2px;
+        border: 1px solid $gray-light;
+    }
   }
 }
