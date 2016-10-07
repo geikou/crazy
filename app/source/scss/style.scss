@@ -233,21 +233,21 @@ body {
     h1{
       font-size: 25px;
       line-height: 1.7em;
-      background: $glay-light;
+      background: $gray-light;
       padding: 25px;
       margin-bottom: 1.8em;
     }
     h2{
       font-size: 22px;
       line-height: 1.7em;
-      border-left:7px solid $glay-light;
+      border-left:7px solid $gray-light;
       padding: 20px;
       margin-bottom: 1.8em;
     }
     h3{
       font-size: 20px;
       line-height: 1.7em;
-      border-bottom:1px solid $glay-light;
+      border-bottom:1px solid $gray-light;
       padding: 15px;
       margin-bottom: 1.8em;
     }
@@ -272,7 +272,7 @@ body {
       margin-bottom: 1.8em;
     }
     a{/*リンクされた文字*/
-    color:$glat-medium;
+    color: $gray-medium;
     font-style:normal;
     text-decoration:none;
     }
@@ -287,7 +287,7 @@ body {
         line-height: 3em;
         list-style-position: inside;
         margin: 2em 0 4px 2em;
-        border: 1px solid $glay-light;
+        border: 1px solid $gray-light;
     }
     ul {
         list-style: circle;
@@ -303,7 +303,7 @@ body {
       margin: 2em 0 4px 2em;
     }
     table, th, td {
-      border: 1px solid $glay-light;
+      border: 1px solid $gray-light;
     }
     th {
       border-width: 0 1px 1px 0;
