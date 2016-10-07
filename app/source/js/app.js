@@ -5,7 +5,7 @@ var $instaSlider = $('.js-insta-slider');
 var instaMargin = 0;
 setInterval(function(){
   instaMargin--;
-  $instaSlider.css( 'margin-top': instaMargin );
+  $instaSlider.css( 'margin-top', instaMargin );
 }, 40);
 
 
@@ -125,10 +125,10 @@ var $jsPostThumb = $('.js-post-thumb');
 
 $jsPostThumb.hover(
   function(e) {
-    $(this).parents('.js-post-anchor').find('.js-post-title').addClass('a-text-hover');
+    $(this).parents('.js-post-anchor').find('.js-post-title-wrapper').addClass('a-text-hover');
   },
   function(e) {
-    $(this).parents('.js-post-anchor').find('.js-post-title').removeClass('a-text-hover');
+    $(this).parents('.js-post-anchor').find('.js-post-title-wrapper').removeClass('a-text-hover');
   }
 );
 
