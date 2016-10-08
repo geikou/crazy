@@ -20,6 +20,9 @@ body {
       &:nth-child(even) {
         margin-right: 20px;
         margin-left: 0;
+        @include media(sp) {
+          margin-right: 0;
+        }
       }
       @include media(pc) {
         &:first-child {
@@ -95,8 +98,8 @@ body {
           &.interview .post-category:after { content: url('../images/contents/category/interview.png'); }
           &.report .post-category:after { content: url('../images/contents/category/report.png'); }
           &.think .post-category:after { content: url('../images/contents/category/think.png'); }
-          &.daily .post-category:after { content: url('../images/contents/category/daily.png'); }
-          &.pr .post-category:after { content: url('../images/contents/category/pr.png'); }
+          &.days .post-category:after { content: url('../images/contents/category/days.png'); }
+          &.promotion .post-category:after { content: url('../images/contents/category/promotion.png'); }
         }
       }
     }
@@ -160,6 +163,9 @@ body {
   }
   &.archive-title {
     padding: 0 0 66px 0;
+    @include media(sp) {
+      padding: 0 0 36px 0;
+    }
     &:before {
       top: 8%;
     }
@@ -236,6 +242,7 @@ body {
         letter-spacing: .6px;
         color: #bebebe;
         display: block;
+        text-transform: lowercase;
       }
     }
     .post-anchor {
@@ -317,18 +324,20 @@ body {
     }
     &.interview .post-category:after { content: 'インタビュー'; }
     &.report .post-category:after { content: 'レポート'; }
-    &.daily .post-category:after { content: '日々'; }
-    &.pr .post-category:after { content: '広報'; }
+    &.days .post-category:after { content: '日々'; }
+    &.promotion .post-category:after { content: '広報'; }
     &.think .post-category:after { content: '考える'; }
   }
   .single-post {
+    width: 96%;
+    margin: 0 auto;
     font-size: 1rem;
     .post-date {
       float: left;
       font-size: 22px;
       line-height: 1.4em;
       color: $gray-medium;
-      margin-right: 20px;
+      margin-right: 16px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       .post-date-month {
@@ -360,6 +369,10 @@ body {
       float: left;
       width: 640px;
       height: auto;
+      @include media(sp) {
+        width: 83%;
+        margin: 0 auto;
+      }
       .post-category {
         background-color: black;
         color: white;
@@ -372,10 +385,14 @@ body {
         font-weight: bold;
         line-height: 1.7em;
         padding: 5px 10px 10px 0;
+        @include media(sp) {
+          line-height: 1.5em;
+          padding: 5px 0 0 0;
+        }
       }
     }
     hr{
-      width:100%;
+      width: 100%;
       margin: 1.5em 0 3em;
       border: 1px solid $gray-light;
     }
@@ -391,7 +408,7 @@ body {
       font-size: 22px;
       font-weight: bold;
       line-height: 1.7em;
-      border-left:7px solid $gray-light;
+      border-left: 7px solid $gray-light;
       padding: 20px;
       margin-bottom: 1.8em;
     }
@@ -399,7 +416,7 @@ body {
       font-size: 22px;
       font-weight: bold;
       line-height: 1.7em;
-      border-bottom:1px solid $gray-light;
+      border-bottom: 1px solid $gray-light;
       padding: 15px;
       margin-bottom: 1.8em;
     }
@@ -477,6 +494,10 @@ body {
       max-width: 720px;
       display: block;
       margin: 0 auto 2em;
+      @include media(sp) {
+        width: 100%;
+        height: auto;
+      }
     }
     strong {
       background: linear-gradient(transparent 80%, $green 80%);
@@ -485,10 +506,17 @@ body {
 
     .sns-share {
       width: 720px;
+      @include media(sp) {
+        width: 100%;
+        margin: 4em auto;
+      }
       margin: 7em auto;
       text-align: center;
       .button {
         margin: 0 60px;
+        @include media(sp) {
+          margin: 10px 0;
+        }
         line-height: 40px;
         .icon {
           margin-right: 12px;
@@ -507,15 +535,26 @@ body {
     }
     .about-writer {
       width: 720px;
+      @include media(sp) {
+        width: 100%;
+      }
       .post-writer-photo {
         float: left;
         width: 120px;
         height: 120px;
+        @include media(sp) {
+          width: 80px;
+          height: 80px;
+        }
         border-radius: 50%;
       }
       .about-writer-right {
         float: left;
         width: 580px;
+        @include media(sp) {
+          width: calc( 100% - 80px - 20px );
+          margin: 0 0 30px 20px;
+        }
         margin: 10px 0 40px 20px;
         .post-writer-position {
           display: block;
@@ -526,8 +565,13 @@ body {
         }
         .post-writer-name {
           font-size: 22px;
+          font-weight: 400;
         }
         .post-writer-name-en {
+          @include media(sp) {
+            display: block;
+            margin: 10px 0 0;
+          }
           font-weight: bold;
           font-size: 13px;
           color: $gray-medium;
@@ -536,29 +580,49 @@ body {
             display: inline-block;
             content: "/";
             padding: 0 10px 0 14px;
+            @include media(sp) {
+              padding: 0 10px 0 3px;
+            }
           }
         }
         .post-writer-text {
           margin: 20px 0;
           line-height: 1.6em;
+          @include media(sp) {
+            margin: 10px 0;
+          }
         }
       }
     }
 
     .related-posts {
       width: 720px;
+      @include media(sp) {
+        width: 100%;
+      }
       .article{
         height: 120px;
+        @include media(sp) {
+          height: auto;
+        }
       }
       .related-post-thumb {
         float: left;
         width: 120px;
         height: 90px;
+        @include media(sp) {
+          width: 100px;
+          height: 75px;
+        }
       }
       .related-post-info {
         float: left;
         width: 580px;
         margin: 0 0 10px 20px;
+        @include media(sp) {
+          width: calc( 100% - 100px - 10px );
+          margin: 0 0 10px 10px
+        }
         .related-post-time{
           margin-bottom: 3px;
           font-size: 14px;
@@ -567,6 +631,9 @@ body {
         }
         .related-post-title{
           font-size: 16px;
+          @include media(sp) {
+            margin-bottom: 10px;
+          }
         }
       }
     }

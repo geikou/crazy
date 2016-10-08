@@ -230,15 +230,16 @@
   @include media(pc) {
     display: none;
   }
-  width: 100%;
-  height: 50vw;
+  width: 100vw;
+  height: 56.25vw;
   background: url('../videos/poster.png') no-repeat;
   background-size: cover;
   .sp-gnav {
     position: fixed;
+    top: -60px;
     width: 100%;
     height: 60px;
-    background: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.9);
     z-index: 10;
     .site-name {
       line-height: 60px;
@@ -255,6 +256,7 @@
     right: 10px;
     width: 24px;
     height: 21px;
+    z-index: 12;
     span {
       position: absolute;
       left: 0;
@@ -273,9 +275,16 @@
     }
   }
   .slide-menu {
-    display: none;
+    position: fixed;
+    top: 60px;
+    left: 100vw;
+    z-index: 11;
     width: 100%;
     background: $gray-light;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    max-height: 100vh;
+    overflow: scroll;
     .slide-menu-ttl {
       height: 60px;
       padding: 0 0 0 20px;
@@ -300,6 +309,9 @@
           font-size: 16px;
         }
       }
+    }
+    &.slide-menu-is-open {
+      // ここにxのスタイルかな？
     }
   }
 }
