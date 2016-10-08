@@ -1,12 +1,24 @@
 /*
   Instagram フィードを流す
 *** */
-var $instaSlider = $('.js-insta-slider');
-var instaMargin = 0;
+var $instagramSlider = $('.js-instagram-slider');
+var instagramSliderFrag = true;
+var instagramMargin = 0;
+
 setInterval(function(){
-  instaMargin--;
-  $instaSlider.css( 'margin-top', instaMargin );
+  if(!instagramSliderFrag) { return; }
+  instagramMargin--;
+  $instagramSlider.css( 'margin-top', instagramMargin );
 }, 40);
+
+$instagramSlider.hover(
+  function(e) {
+    instagramSliderFrag = false;
+  },
+  function(e) {
+    instagramSliderFrag = true;
+  }
+)
 
 
 /*
