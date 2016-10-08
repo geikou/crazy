@@ -4,6 +4,7 @@
   height: 400px;
   @include media(sp) {
     height: auto;
+    min-width: 320px;
   }
   padding: 0 0 10px 0;
   color: $white;
