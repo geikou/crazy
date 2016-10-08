@@ -400,6 +400,7 @@ body {
           line-height: 1.5em;
           padding: 5px 0 0 0;
         }
+        @extend .a-text;
       }
     }
     hr{
