@@ -186,7 +186,7 @@ body {
       visibility: hidden;
       @include media(sp) {
         visibility: visible;
-        padding: 0 40px;
+        padding: 0 80px;
       }
     }
     .hr-title-pc {
@@ -407,6 +407,9 @@ body {
       width: 100%;
       margin: 1.5em 0 3em;
       border: 1px solid $gray-light;
+      @include media(sp) {
+        margin: 1.5em 0 1.5em;
+      }
     }
     h2{
       font-size: 25px;
@@ -615,7 +618,7 @@ body {
           margin: 20px 0;
           line-height: 1.6em;
           @include media(sp) {
-            margin: 10px 0;
+            margin: 10px 0 30px 0;
           }
         }
       }
@@ -623,6 +626,7 @@ body {
 
     .related-posts {
       width: 720px;
+      margin-bottom: 40px;
       @include media(sp) {
         width: 100%;
       }
@@ -639,6 +643,7 @@ body {
         @include media(sp) {
           width: 100px;
           height: 75px;
+          margin: 5px 0 0 0;
         }
       }
       .related-post-info {
@@ -652,14 +657,21 @@ body {
         .related-post-time{
           margin-bottom: 3px;
           font-size: 14px;
-          color: black;
           letter-spacing: 0.2em;
+          @include media(sp) {
+            margin-top: 0; 
+            font-size: 13px;
+          }
         }
         .related-post-title{
+          color: black;
           font-size: 16px;
           font-weight: 400;
           @include media(sp) {
-            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.5em;
+            margin-bottom: 0;
+            
           }
         }
       }
