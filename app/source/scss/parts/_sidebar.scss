@@ -123,6 +123,10 @@
 				width: 100%;
 				-webkit-backface-visibility: hidden;
 				backface-visibility: hidden;
+				&:hover {
+					opacity: 0.75;
+					transition: all .3s ease-in-out;
+				}
 			}
 			.checkit {
 				width: 130px;
