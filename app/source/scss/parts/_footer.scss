@@ -1,5 +1,6 @@
 .footer {
   width: 100%;
+  min-width: 1024px;
   height: 400px;
   @include media(sp) {
     height: auto;
