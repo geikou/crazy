@@ -358,7 +358,7 @@ body {
       width: 640px;
       height: auto;
       @include media(sp) {
-        width: 84%;
+        width: 83%;
         margin: 0 auto;
       }
       .post-category {
@@ -373,6 +373,10 @@ body {
         font-weight: bold;
         line-height: 1.7em;
         padding: 5px 10px 10px 0;
+        @include media(sp) {
+          line-height: 1.5em;
+          padding: 5px 0 0 0;
+        }
       }
     }
     hr{
