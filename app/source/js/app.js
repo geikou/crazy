@@ -59,8 +59,8 @@ $navTrigger.on('click', function() {
   if(!slideMenuFrag){ return; }
   slideMenuFrag = false; // アニメーションqueueをためない
 
-  if($(this).hasClass('.slide-menu-is-open')) {
-    $navTrigger.removeClass('.slide-menu-is-open');
+  if(!$(this).hasClass('.slide-menu-is-open')) {
+    $navTrigger.addClass('.slide-menu-is-open');
     $slideMenu.animate({
       'opacity': '1',
       'left': '0'
@@ -68,10 +68,11 @@ $navTrigger.on('click', function() {
       duration: 200,
       complete: function() {
         slideMenuFrag = true;
+
       }
     });
   } else {
-    $navTrigger.addClass('.slide-menu-is-open');
+    $navTrigger.removeClass('.slide-menu-is-open');
     $slideMenu.animate({
       'opacity': '0',
       'left': '100vw'
