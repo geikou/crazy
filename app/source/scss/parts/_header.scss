@@ -52,6 +52,40 @@
       border-top: 1px solid $white;
     }
   }
+  .search {
+    position: relative;
+    font-size: 0;
+    color: $white;
+    .search-button {
+      display: inline-block;
+      position: relative;
+      right: 36px;
+      width: 36px;
+      vertical-align: top;
+      font-size: 12px;
+      line-height: 36px;
+      text-align: center;
+      opacity: 0;
+    }
+    .search-form {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 35px 10px 15px;
+      border-radius: 25px;
+      border: 1px solid $white;
+      background-color: rgba(255,255,255,.3);
+      color: $white;
+      @extend .a-focus;
+    }
+    .search-button-label {
+      color: inherit;
+      position: absolute;
+      right: 12px;
+    }
+  }
 }
 
 .js-header {
@@ -98,42 +132,15 @@
       width: 200px;
       margin-top: 16px;
       margin-right: 30px;
-      font-size: 0;
-      color: $white;
-      position: relative;
       .search-button {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 12px;
-        position: relative;
-        right: 36px;
-        width: 36px;
         height: 36px;
-        line-height: 36px;
-        text-align: center;
-        color: $white;
-        opacity: 0;
       }
       .search-form {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 14px;
         height: 36px;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px 35px 10px 15px;
-        border-radius: 25px;
-        border: 1px solid $white;
-        background-color: rgba(255,255,255,.3);
-        color: $white;
-        @extend .a-focus;
       }
       .search-button-label {
-        color: inherit;
         font-size: 18px;
         line-height: 36px;
-        position: absolute;
-        right: 12px;
       }
     }
     .logo {
@@ -309,6 +316,21 @@
       &.slide-company {
         background: none;
         color: $gray-medium;
+      }
+    }
+    .search {
+      width: 86%;
+      margin: 20px auto 0 auto;
+      color: $white;
+      .search-button {
+        height: 20px;
+      }
+      .search-form {
+        height: 46px;
+      }
+      .search-button-label {
+        font-size: 20px;
+        line-height: 46px;
       }
     }
     .menu {
