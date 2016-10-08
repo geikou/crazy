@@ -98,8 +98,8 @@ body {
           &.interview .post-category:after { content: url('../images/contents/category/interview.png'); }
           &.report .post-category:after { content: url('../images/contents/category/report.png'); }
           &.think .post-category:after { content: url('../images/contents/category/think.png'); }
-          &.daily .post-category:after { content: url('../images/contents/category/daily.png'); }
-          &.pr .post-category:after { content: url('../images/contents/category/pr.png'); }
+          &.days .post-category:after { content: url('../images/contents/category/days.png'); }
+          &.promotion .post-category:after { content: url('../images/contents/category/promotion.png'); }
         }
       }
     }
@@ -312,8 +312,8 @@ body {
     }
     &.interview .post-category:after { content: 'インタビュー'; }
     &.report .post-category:after { content: 'レポート'; }
-    &.daily .post-category:after { content: '日々'; }
-    &.pr .post-category:after { content: '広報'; }
+    &.days .post-category:after { content: '日々'; }
+    &.promotion .post-category:after { content: '広報'; }
     &.think .post-category:after { content: '考える'; }
   }
   .single-post {
