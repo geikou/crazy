@@ -383,7 +383,7 @@ body {
         margin: 0 auto;
       }
       .post-category {
-        background-color: black;
+        background-color: #444444;
         color: white;
         padding: 7px;
         margin-bottom:5px;
@@ -392,9 +392,11 @@ body {
       h1 {
         font-size: 25px;
         font-weight: bold;
+        color: black;
         line-height: 1.7em;
         padding: 5px 10px 10px 0;
         @include media(sp) {
+          font-size: 22px;
           line-height: 1.5em;
           padding: 5px 0 0 0;
         }
@@ -407,6 +409,9 @@ body {
     }
     h2{
       font-size: 25px;
+      @include media(sp) {
+        font-size: 22px;
+      }
       font-weight: bold;
       line-height: 1.7em;
       background: $gray-light;
@@ -521,6 +526,7 @@ body {
     strong {
       background: linear-gradient(transparent 80%, $green 80%);
       font-weight: bold;
+      margin: 0 0.8em;
     }
 
     .sns-share {
@@ -645,11 +651,12 @@ body {
         .related-post-time{
           margin-bottom: 3px;
           font-size: 14px;
-          color: $gray-medium;
+          color: black;
           letter-spacing: 0.2em;
         }
         .related-post-title{
           font-size: 16px;
+          font-weight: 400;
           @include media(sp) {
             margin-bottom: 10px;
           }
