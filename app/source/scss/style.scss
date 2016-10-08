@@ -135,7 +135,7 @@ body {
   .hr-title-inner {
     padding: 0 80px;
     @include media(sp) {
-      padding: 0 20px;
+      padding: 0 40px;
     }
     background: #fff;
   }
@@ -171,9 +171,30 @@ body {
     }
   }
   &.category-title {
+    height: 70px;
     padding: 0px 0 66px 0;
+    @include media(sp) {
+      padding: 0;
+    }
     &:before {
       top: 30%;
+    }
+    .hr-title-sp {
+      font-size: 20px;
+      position: relative;
+      top:-80px;
+      visibility: hidden;
+      @include media(sp) {
+        visibility: visible;
+        padding: 0 40px;
+      }
+    }
+    .hr-title-pc {
+      visibility: visible;
+      @include media(sp) {
+        visibility: hidden;
+      }
+      padding: 0 0 0 100px;
     }
   }
 }
@@ -455,6 +476,7 @@ body {
         list-style: decimal;
     }
     table {
+      width:100%;
       margin: 2em 0 2em 2px;
     }
     table, th, td {
@@ -468,6 +490,21 @@ body {
     td {
       padding: 1.5em;
     }
+    .scroll {
+     overflow: auto;
+     white-space: nowrap;
+     margin-bottom: 2em;
+    }
+    .scroll::-webkit-scrollbar {
+     height: 5px;
+    }
+    .scroll::-webkit-scrollbar-track {
+     background: #F1F1F1;
+    }
+    .scroll::-webkit-scrollbar-thumb {
+     background: #BCBCBC;
+    }
+
     blockquote {
       color: $gray-medium;
       font-size: 15px;
