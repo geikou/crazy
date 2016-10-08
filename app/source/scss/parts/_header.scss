@@ -14,12 +14,12 @@
       .site-name {
         margin: 0 0 0 10px;
         padding: 0;
-        font-size: 20px;
+        font-size: 19px;
         color: #000;
       }
     }
     &.sp-logo {
-      padding: 15vw 0 0;
+      padding: 20vw 0 0;
       text-align: center;
       .site-name {
         font-size: 22px;
@@ -30,7 +30,7 @@
     position: absolute;
     top: 230px;
     @include media(sp) {
-      top: 34vw;
+      top: 38vw;
       letter-spacing: 0.16em;
     }
     left: 0;
@@ -251,12 +251,12 @@
     display: inline-block;
   }
   .nav-trigger {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 10px;
     width: 24px;
     height: 21px;
-    z-index: 12;
+    z-index: 20;
     span {
       position: absolute;
       left: 0;
@@ -273,15 +273,29 @@
         top: 18px;
       }
     }
+    &.slide-menu-is-open {
+      span {
+        background: $white;
+        &:nth-of-type(1) {
+          transform: rotate(-45deg) translate(-5.5px,6.5px);
+        }
+        &:nth-of-type(2) {
+          background: rgba(255,255,255,0);
+        }
+        &:nth-of-type(3) {
+          transform: rotate(45deg) translate(-6px,-7.5px);
+        }
+      }
+    }
   }
   .slide-menu {
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 100vw;
     z-index: 11;
     width: 100%;
+    height: 100vh;
     background: $gray-light;
-    opacity: 0;
     transition: all .3s ease-in-out;
     max-height: 100vh;
     overflow: scroll;
@@ -305,13 +319,11 @@
         line-height: 60px;
         background: $white;
         a {
+          display: block;
           color: #000;
           font-size: 16px;
         }
       }
-    }
-    &.slide-menu-is-open {
-      // ここにxのスタイルかな？
     }
   }
 }
