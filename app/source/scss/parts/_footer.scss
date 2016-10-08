@@ -23,7 +23,8 @@
       width: 96%;
     }
     margin: 0 auto;
-    .footer-left, .footer-right {
+    .footer-left,
+    .footer-right {
       float: left;
       width: 50%;
       @include media(sp) {

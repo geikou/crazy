@@ -482,33 +482,27 @@ body {
         list-style: decimal;
     }
     table {
-      width:100%;
+      width: 100%;
+      display: block;
+      max-width: 720px;
       margin: 2em 0 2em 2px;
+      overflow-x: scroll;
+      white-space: nowrap;
+      &:-webkit-scrollbar {
+       height: 5px;
+      }
+      &:-webkit-scrollbar-track {
+       background: #F1F1F1;
+      }
+      &:-webkit-scrollbar-thumb {
+       background: #BCBCBC;
+      }
     }
-    table, th, td {
-      border: 1px solid $gray-light;
-    }
-    th {
-      border-width: 0 1px 1px 0;
 
-    }
     th,
     td {
+      border: 1px solid $gray-light;
       padding: 1.5em;
-    }
-    .scroll {
-     overflow: auto;
-     white-space: nowrap;
-     margin-bottom: 2em;
-    }
-    .scroll::-webkit-scrollbar {
-     height: 5px;
-    }
-    .scroll::-webkit-scrollbar-track {
-     background: #F1F1F1;
-    }
-    .scroll::-webkit-scrollbar-thumb {
-     background: #BCBCBC;
     }
 
     blockquote {
