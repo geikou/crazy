@@ -135,7 +135,7 @@ body {
   .hr-title-inner {
     padding: 0 80px;
     @include media(sp) {
-      padding: 0 20px;
+      padding: 0 40px;
     }
     background: #fff;
   }
@@ -171,21 +171,30 @@ body {
     }
   }
   &.category-title {
+    height: 70px;
     padding: 0px 0 66px 0;
+    @include media(sp) {
+      padding: 0;
+    }
     &:before {
       top: 30%;
     }
     .hr-title-sp {
-      visibility: hidden;
       font-size: 20px;
+      position: relative;
+      top:-80px;
+      visibility: hidden;
+      @include media(sp) {
+        visibility: visible;
+        padding: 0 40px;
+      }
     }
-    @include media(sp) {
-      .hr-title-pc {
+    .hr-title-pc {
+      visibility: visible;
+      @include media(sp) {
         visibility: hidden;
       }
-      .hr-title-sp {
-        visibility: visible;
-      }
+      padding: 0 0 0 100px;
     }
   }
 }
