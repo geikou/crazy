@@ -1,11 +1,11 @@
 /*
   Instagram フィードを流す
 *** */
-var $instaSlider = $('.js-insta-slider');
-var instaMargin = 0;
+var $instagramSlider = $('.js-instagram-slider');
+var instagramMargin = 0;
 setInterval(function(){
-  instaMargin--;
-  $instaSlider.css( 'margin-top', instaMargin );
+  instagramMargin--;
+  $instagramSlider.css( 'margin-top', instagramMargin );
 }, 40);
 
 
@@ -59,10 +59,9 @@ $navTrigger.on('click', function() {
   if(!slideMenuFrag){ return; }
   slideMenuFrag = false; // アニメーションqueueをためない
 
-  if(!$(this).hasClass('.slide-menu-is-open')) {
+  if(!$(this).hasClass('slide-menu-is-open')) {
     $navTrigger.addClass('slide-menu-is-open');
     $slideMenu.animate({
-      'opacity': '1',
       'left': '0'
     }, {
       duration: 200,
@@ -74,7 +73,6 @@ $navTrigger.on('click', function() {
   } else {
     $navTrigger.removeClass('slide-menu-is-open');
     $slideMenu.animate({
-      'opacity': '0',
       'left': '100vw'
     }, {
       duration: 200,
