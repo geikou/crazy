@@ -169,6 +169,18 @@ body {
     &:before {
       top: 30%;
     }
+    .hr-title-sp {
+      visibility: hidden;
+      font-size: 20px;
+    }
+    @include media(sp) {
+      .hr-title-pc {
+        visibility: hidden;
+      }
+      .hr-title-sp {
+        visibility: visible;
+      }
+    }
   }
 }
 
