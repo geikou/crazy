@@ -325,7 +325,7 @@ body {
       font-size: 22px;
       line-height: 1.4em;
       color: $gray-medium;
-      margin-right: 20px;
+      margin-right: 16px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       .post-date-month {
@@ -358,7 +358,7 @@ body {
       width: 640px;
       height: auto;
       @include media(sp) {
-        width: 90%;
+        width: 84%;
         margin: 0 auto;
       }
       .post-category {
