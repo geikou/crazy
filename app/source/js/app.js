@@ -2,11 +2,23 @@
   Instagram フィードを流す
 *** */
 var $instagramSlider = $('.js-instagram-slider');
+var instagramSliderFrag = true;
 var instagramMargin = 0;
+
 setInterval(function(){
+  if(!instagramSliderFrag) { return; }
   instagramMargin--;
   $instagramSlider.css( 'margin-top', instagramMargin );
 }, 40);
+
+$instagramSlider.hover(
+  function(e) {
+    instagramSliderFrag = false;
+  },
+  function(e) {
+    instagramSliderFrag = true;
+  }
+)
 
 
 /*
