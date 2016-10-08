@@ -60,7 +60,7 @@ $navTrigger.on('click', function() {
   slideMenuFrag = false; // アニメーションqueueをためない
 
   if(!$(this).hasClass('.slide-menu-is-open')) {
-    $navTrigger.addClass('.slide-menu-is-open');
+    $navTrigger.addClass('slide-menu-is-open');
     $slideMenu.animate({
       'opacity': '1',
       'left': '0'
@@ -72,7 +72,7 @@ $navTrigger.on('click', function() {
       }
     });
   } else {
-    $navTrigger.removeClass('.slide-menu-is-open');
+    $navTrigger.removeClass('slide-menu-is-open');
     $slideMenu.animate({
       'opacity': '0',
       'left': '100vw'
