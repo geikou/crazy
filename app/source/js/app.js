@@ -1,23 +1,48 @@
 /*
   Instagram フィードを流す
 *** */
+
+// jQueryオブジェクトを取得
 var $instagramSlider = $('.js-instagram-slider');
-var instagramSliderFrag = true;
-var instagramMargin = 0;
+// postの個数
+var $instagramDataLength = $('.js-instagram-data').length;
+// hoverされてるかどうかのFrag
+var isHover = false;
+// translateYの値
+var instagramTranslateY = 0;
+
+var called = false;
 
 setInterval(function(){
-  if(!instagramSliderFrag) { return; }
-  instagramMargin--;
-  $instagramSlider.css( 'margin-top', instagramMargin );
-}, 40);
+  if(isHover) { return; } // hoverしてるときは離脱する
 
-$instagramSlider.hover(
-  function(e) {
-    instagramSliderFrag = false;
-  },
-  function(e) {
-    instagramSliderFrag = true;
+  translateY(); // 移動させる関数を呼ぶ
+
+  // 移動によって最底辺まできたらDOMを下に追加する
+  if (instagramTranslateY > $instagramDataLength*242 - 550) {
+    if (!called) {
+      called = true;
+      addInstagramPost();  // DOM追加
+    }
   }
+
+}, 50);
+
+function addInstagramPost () {
+  $instagramSlider.append($instagramSlider.html());
+}
+
+function translateY () {
+  // 50msに1px上に移動していく
+  $instagramSlider.css( 'transform', 'translateY(-'+instagramTranslateY+'px)' );
+  instagramTranslateY++;
+}
+
+
+// hoverのときに流れを止める
+$instagramSlider.hover(
+  function(e) { isHover = true; },
+  function(e) { isHover = false; }
 )
 
 
