@@ -65,11 +65,46 @@
 				.slider {
 					display: block;
 					width: 100%;
-					img {
+					height: 232px;
+					.instagram-data {
+						position: relative;
 						width: 100%;
-						height: auto;
-						display: block;
+						height: 100%;
 						margin-top: 10px;
+						.instagram-data-images-standard_resolution {
+							width: 100%;
+							height: auto;
+							display: block;
+						}
+						.instagram-data-caption {
+							opacity: 0;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							padding: 10px;
+							box-sizing: border-box;
+							background-color: rgba(0,0,0,.6);
+							color: $white;
+							font-weight: bold;
+							font-size: 12px;
+							letter-spacing: 1.3px;
+							line-height: 1.3em;
+							transition: all .3s;
+							.instagram-data-caption-created_time {
+								margin-bottom: 10px;
+								font-weight: 400;
+							}
+							.instagram-data-caption-text {
+
+							}
+						}
+						&:hover {
+							.instagram-data-caption {
+								opacity: 1;
+							}
+						}
 					}
 				}
 			}

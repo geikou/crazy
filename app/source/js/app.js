@@ -1,11 +1,11 @@
 /*
   Instagram フィードを流す
 *** */
-var $instaSlider = $('.js-insta-slider');
-var instaMargin = 0;
+var $instagramSlider = $('.js-instagram-slider');
+var instagramMargin = 0;
 setInterval(function(){
-  instaMargin--;
-  $instaSlider.css( 'margin-top', instaMargin );
+  instagramMargin--;
+  $instagramSlider.css( 'margin-top', instagramMargin );
 }, 40);
 
 
