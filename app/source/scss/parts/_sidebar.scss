@@ -121,6 +121,7 @@
 			}
 			.banner {
 				width: 100%;
+				border: 1px solid $gray-light;
 				-webkit-backface-visibility: hidden;
 				backface-visibility: hidden;
 				transition: all .3s ease-in-out;
