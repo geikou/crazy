@@ -134,23 +134,14 @@ body {
   font-weight: 400;
   .hr-title-inner {
     padding: 0 80px;
+    background: #fff;
     @include media(sp) {
       padding: 0 40px;
     }
-    background: #fff;
   }
   .hr-title-bold {
     font-weight: bold;
     padding: 0 8px 0 0;
-  }
-  &:before {
-    content:"";
-    display: block;
-    position: absolute;
-    z-index:-1;
-    top: 50%;
-    width: 100%;
-    border-bottom: 1px solid #e6e6e6;
   }
   &:before {
     content:"";
@@ -172,7 +163,7 @@ body {
   }
   &.category-title {
     height: 70px;
-    padding: 0px 0 66px 0;
+    padding: 0 0 66px 0;
     @include media(sp) {
       padding: 0;
     }
@@ -182,19 +173,21 @@ body {
     .hr-title-sp {
       font-size: 20px;
       position: relative;
-      top:-80px;
-      visibility: hidden;
+      top: 10px;
+      display: none;
       @include media(sp) {
-        visibility: visible;
-        padding: 0 80px;
+        display: block;
+        margin: 0 80px;
       }
     }
     .hr-title-pc {
-      visibility: visible;
-      @include media(sp) {
-        visibility: hidden;
-      }
+      display: block;
+      box-sizing: border-box;
       padding: 0 0 0 100px;
+      @include media(sp) {
+        width: 100%;
+        display: none;
+      }
     }
   }
 }
@@ -371,6 +364,7 @@ body {
         text-align: center;
         letter-spacing: .6px;
         color: #bebebe;
+        text-transform: lowercase;
         display: block;
       }
     }
@@ -659,7 +653,7 @@ body {
           font-size: 14px;
           letter-spacing: 0.2em;
           @include media(sp) {
-            margin-top: 0; 
+            margin-top: 0;
             font-size: 13px;
           }
         }
