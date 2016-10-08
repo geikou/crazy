@@ -30,7 +30,7 @@ gulp.task('sass', function() {
 		.pipe(sass())
 		.pipe(sass({outputStyle: 'expanded'}))
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			browsers: ['last 2 versions', 'ie >= 9', 'Android >= 4', 'ios_saf >= 8', 'safari >= 8'],
 			cascade: false
 		}))
 		.pipe(gulp.dest('./app/public/css'))
