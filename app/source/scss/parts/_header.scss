@@ -28,9 +28,9 @@
   }
   .catchcopy {
     position: absolute;
-    top: 230px;
+    top: 225px;
     @include media(sp) {
-      top: 38vw;
+      top: 36vw;
       letter-spacing: 0.16em;
     }
     left: 0;
@@ -45,11 +45,17 @@
       content: "";
       display: block;
       position: absolute;
-      top: -20px;
-      left: calc( 50% - 35px);
-      width: 74px;
-      height: 1px;
-      border-top: 1px solid $white;
+      top: -26px;
+      left: calc( 50% - ( 87px / 2 ) );
+      background: url('../images/common/header/line.png') no-repeat;
+      background-size: 100%;
+      width: 87px;
+      height: 8px;
+      @include media(sp) {
+        background-repeat: no-repeat;
+        background-position: 110% 110%;
+        background-size: 80% 80%;
+      }
     }
   }
   .search {
@@ -144,7 +150,7 @@
       }
     }
     .logo {
-      margin: 145px 0 110px;
+      margin: 130px 0 125px;
       .site-name {
         padding: 40px 0;
         font-size: 32px;

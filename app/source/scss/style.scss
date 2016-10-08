@@ -664,14 +664,12 @@ body {
           }
         }
         .related-post-title{
-          color: black;
           font-size: 16px;
           font-weight: 400;
           @include media(sp) {
             font-size: 13px;
             line-height: 1.5em;
             margin-bottom: 0;
-            
           }
         }
       }
